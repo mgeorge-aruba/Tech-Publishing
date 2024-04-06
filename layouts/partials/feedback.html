@@ -1,0 +1,72 @@
+
+{{ if (and (not .Params.hide_feedback) (.Site.Params.ui.feedback.enable)) -}}
+{{ $feedback_subject := printf "subject=FEEDBACK - %s" .Page.Title -}}
+{{ $feedback_subject = replace $feedback_subject " " "%20" -}}
+{{ $feedback_body := printf "body=Page title: %s%%0A%%0AURL: %s%%0A%%0AComments:%%0A%%0A" .Page.Title .Page.Permalink -}}
+{{ $feedback_body = replace $feedback_body " " "%20" -}}
+{{ $feedback_query := printf "%s&%s" $feedback_subject $feedback_body }}
+{{ with .Site.Params.ui.feedback -}}
+<style>
+  .feedback--title {
+    font-size: x-large;
+    font-weight: bold;
+    display: block;
+  }
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<p class="feedback--title">{{- i18n "feedback_title" -}}</p>
+<p class="feedback--question">{{- i18n "feedback_question" -}}</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">{{- i18n "feedback_positive" -}}</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">{{- i18n "feedback_negative" -}}</button>
+<p class="feedback--response feedback--response-yes">
+  {{ .yes | safeHTML }} {{ if .feedback_enable_email -}} {{ partial "email-feedback" (dict "address" .feedback_email "display" .feedback_prompt "query" $feedback_query) }} {{ end -}}
+</p>
+<p class="feedback--response feedback--response-no">
+  {{ .no | safeHTML }} {{ if .feedback_enable_email -}} {{ partial "email-feedback" (dict "address" .feedback_email "display" .feedback_prompt "query" $feedback_query) }} {{ end -}}
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    {{ $maxValue := .max_value | default 100 -}}
+    sendFeedback({{ $maxValue }});
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+{{ end -}}
+<br />
+{{ end -}}

@@ -1,0 +1,28 @@
+{{ if .Site.Params.jstoc.enable }}
+<!-- Initialize tocbot -->
+<script src="{{ "js/tocbot.min.js" | relURL }}"></script>
+<script type="text/javascript">
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.td-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.td-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: '{{ with .Site.Params.jstoc.custom_headings }}{{ . }}{{ else }}h2, h3, h4{{ end }}',
+        // ignore headings that are hidden in DOM
+        ignoreHiddenElements: true,
+        // How many heading levels should not be collapsed.
+        // For example, number 6 will show everything since
+        // there are only 6 heading levels and number 0 will collapse them all.
+        // The sections that are hidden will open
+        // and close as you scroll to headings within them.
+        collapseDepth: '{{ with .Site.Params.jstoc.collapse_depth }}{{ . }} {{ else }}1{{ end }}',
+        // Smooth scrolling enabled.
+        scrollSmooth: false,
+        // Headings that match the ignoreSelector will be skipped.
+        ignoreSelector: '{{ with .Site.Params.jstoc.ignore_selector }}{{ . }} {{ else }}default-ignore{{ end }}',
+        // If there is a fixed article scroll container, set to calculate titles' offset
+        scrollContainer: 'td-content',
+    });
+</script>
+{{ end }}

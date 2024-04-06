@@ -1,0 +1,1180 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Color modes | TechDocs - WLAN, SD-Branch, &amp; Location Services</title>
+<meta name="description" content="Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.">
+<meta property="og:title" content="Color modes" />
+<meta property="og:description" content="Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/docs/5.3/customize/color-modes/" /><meta property="article:section" content="docs" />
+
+
+
+<meta itemprop="name" content="Color modes">
+<meta itemprop="description" content="Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.">
+
+<meta itemprop="wordCount" content="1778">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Color modes"/>
+<meta name="twitter:description" content="Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template."/>
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <div class="top-band"></div>
+<nav class="td-navbar js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 942.71 313.37" style="enable-background:new 0 0 942.71 313.37"><style>.st0{fill:#ff8300}</style><g><path class="st0" d="M744.81 79.56c-7.86.0-15.15 2.33-21.29 6.27v-5.94C722.78 64.11 709.88 59 706.5 57.38h-.38v98.28s11.58-1.25 15.92-7.6c6.38 4.61 14.24 7.35 22.77 7.35 21.38.0 38.69-16.99 38.69-37.92S766.14 79.56 744.81 79.56zm0 58.9c-11.87.0-21.45-9.43-21.45-21.02.0-11.59 9.59-21.02 21.45-21.02 11.87.0 21.43 9.43 21.43 21.02C766.24 129.03 756.63 138.46 744.81 138.46zM826.62 79.56c-21.38.0-38.71 16.99-38.71 37.92s17.31 37.92 38.71 37.92c8.82.0 16.95-2.91 23.49-7.81 4 6.56 15.2 7.81 15.2 7.81v-37.92C865.31 96.55 847.95 79.56 826.62 79.56zm0 58.9c-11.87.0-21.45-9.43-21.45-21.02.0-11.59 9.59-21.02 21.45-21.02 11.87.0 21.43 9.43 21.43 21.02S838.44 138.46 826.62 138.46zM518.07 79.56c-21.34.0-38.68 16.99-38.68 37.92s17.34 37.92 38.68 37.92c8.86.0 16.97-2.91 23.48-7.81 4 6.56 15.2 7.81 15.2 7.81v-37.92C556.75 96.55 539.45 79.56 518.07 79.56zm0 58.9c-11.82.0-21.42-9.43-21.42-21.02.0-11.59 9.6-21.02 21.42-21.02s21.46 9.43 21.46 21.02C539.53 129.03 529.93 138.46 518.07 138.46zM603.05 79.56c4.91.0 9.56.91 13.88 2.53v20.02c-3.69-3.16-8.56-5.11-13.88-5.11-11.7.0-21.13 9.3-21.13 20.73v37.67h-17.8V86.62s7.29.33 12.03 3.57c7-6.56 16.47-10.68 26.94-10.68M698.43 117.36c-.1 20.98-16.68 38.01-37.03 38.01s-36.96-17.03-37.08-38.01v-32.4s17.64 4.4 17.81 23.39v8.81c0 11.46 8.63 20.77 19.22 20.77s19.25-9.31 19.25-20.77v-18.4c.74-15.83 14-20.89 17.43-22.52h.36v41.16L698.43 117.36z"/><path d="M207.37 77.4v142.78h-37.43v-56.5h-55.09v56.5H77.4V77.4h37.43v54.16h55.09V77.4h37.45zm94.71 50.21c0 10.71-6.02 17.9-19.54 17.9H260.9v-35.79h21.65C296.06 109.71 302.08 116.9 302.08 127.61zm-15.63 49.08c30.95.0 51.89-17.19 51.89-49.08S317.4 78.3 286.45 78.3h-62.52v142.78h36.96v-44.39h25.56zm62.6-98.39v142.78h102.06V188.8h-65.33v-24.7h59.78v-31.42h-59.78v-22.27h65.33V78.3H349.05z"/><path d="M489.95 183.01v3.49c2.04-2.38 5.79-4.34 10.22-4.34 8.6.0 13.46 5.62 13.46 14.05v24.87h-10.56v-22.65c0-4-2.04-6.73-6.22-6.73-3.24.0-6.05 1.96-6.9 5.28v24.1h-10.56v-38.06h10.56zm41.04 21.46c.85 6.22 5.36 8.77 10.99 8.77 4.17.0 7.15-.94 10.9-3.32v8.69c-3.15 2.3-7.41 3.32-12.52 3.32-11.58.0-19.5-7.49-19.5-19.59.0-11.92 7.49-20.18 17.88-20.18 11.07.0 16.78 7.66 16.78 18.9v3.41H530.99zM531.33 197.57h14.39c-.25-4.09-2.55-6.98-6.73-6.98C535.5 190.59 532.52 192.8 531.33 197.57zm36.02 23.5v-29.55h-7.24V183h7.24v-10.3h10.56V183H586v8.52h-8.09v29.55H567.35zM634.54 183.01h10.22l-11.58 38.06h-9.71l-6.22-23.33-6.22 23.33h-9.71l-11.58-38.06h10.56l6.81 24.27 6.22-24.27h8.09l6.3 24.27L634.54 183.01zm32.61 38.92c-11.07.0-18.65-8.17-18.65-19.84.0-11.75 7.58-19.93 18.65-19.93 11.07.0 18.65 8.17 18.65 19.93C685.8 213.75 678.22 221.93 667.15 221.93zm0-30.83c-5.28.0-8.17 4.6-8.17 10.99.0 6.3 2.9 10.9 8.17 10.9 5.28.0 8.17-4.6 8.17-10.9C675.33 195.7 672.43 191.1 667.15 191.1zM716.46 193.4c-1.45-.85-3.32-1.28-5.28-1.28-3.58.0-6.47 1.87-7.24 5.36v23.59h-10.56v-38.06h10.56v3.75c1.62-2.72 4.77-4.6 8.52-4.6 1.79.0 3.41.34 4 .68V193.4zm31.93 27.67-13.71-17.54v17.54h-10.56v-55.35h10.56v32.36l13.03-15.07h12.69l-15.84 17.46 16.18 20.61H748.39zm23.08-43c-3.41.0-6.3-2.47-6.3-6.05.0-3.49 2.9-6.05 6.3-6.05 3.32.0 6.22 2.55 6.22 6.05C777.68 175.6 774.79 178.07 771.47 178.07zM766.19 221.07v-38.06h10.56v38.06H766.19zm31.16-38.06v3.49c2.04-2.38 5.79-4.34 10.22-4.34 8.6.0 13.46 5.62 13.46 14.05v24.87h-10.56v-22.65c0-4-2.04-6.73-6.22-6.73-3.24.0-6.05 1.96-6.9 5.28v24.1h-10.56v-38.06H797.35zm57.4 33.72c-1.7 1.96-5.02 3.83-9.28 3.83-10.99.0-17.2-8.86-17.2-19.16.0-10.39 6.22-19.25 17.2-19.25 4.26.0 7.58 1.87 9.28 3.83V183h10.56v33.89c0 13.96-10.3 19.07-20.69 19.07-5.19.0-10.05-1.28-13.11-3.24v-10.39c3.92 3.41 8 4.68 12.94 4.68 5.7.0 10.3-2.89 10.3-9.11V216.73zm0-21.8c-1.19-2.13-3.92-3.92-7.07-3.92-5.62.0-8.86 4.34-8.86 10.39.0 5.96 3.24 10.3 8.86 10.3 3.15.0 5.88-1.7 7.07-3.92V194.93z"/></g></svg></span><span class="navbar-brand__name">TechDocs - WLAN, SD-Branch, &amp; Location Services</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://networkingsupport.hpe.com/" target="_blank" rel="noopener"><span>HPE Networking Support Portal</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.arubanetworks.com/techdocs/ArubaDocPortal/content/docportal.htm" target="_blank" rel="noopener"><span>Documentation Portal</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+  </div>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
+  <a href="/" title="HPE Aruba Networking" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Home</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-markdown-li">
+  <input type="checkbox" id="m-markdown-check"/>
+  <label for="m-markdown-check"><a href="/markdown/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-markdown"><span class="">Markdown Examples</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-posts-li">
+  <input type="checkbox" id="m-posts-check"/>
+  <label for="m-posts-check"><a href="/posts/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-posts"><span class="">Posts</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-postsintune-extensionmy-first-post-li">
+  <input type="checkbox" id="m-postsintune-extensionmy-first-post-check"/>
+  <label for="m-postsintune-extensionmy-first-post-check"><a href="/posts/intune-extension/my-first-post/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-postsintune-extensionmy-first-post"><span class="">My First Post - Test</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-postsclearpass-extension-000-li">
+  <input type="checkbox" id="m-postsclearpass-extension-000-check"/>
+  <label for="m-postsclearpass-extension-000-check"><a href="/posts/clearpass-extension-000/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-postsclearpass-extension-000"><span class="">ClearPass Extensions</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-postsintune-extension-000-li">
+  <input type="checkbox" id="m-postsintune-extension-000-check"/>
+  <label for="m-postsintune-extension-000-check"><a href="/posts/intune-extension-000/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-postsintune-extension-000"><span class="">Intune Extension</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <input type="checkbox" id="m-docs-check" checked/>
+  <label for="m-docs-check"><a href="/docs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docs"><span class=""></span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs53-li">
+  <input type="checkbox" id="m-docs53-check" checked/>
+  <label for="m-docs53-check"><a href="/docs/5.3/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docs53"><span class=""></span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53aboutoverview-li">
+  <input type="checkbox" id="m-docs53aboutoverview-check"/>
+  <label for="m-docs53aboutoverview-check"><a href="/docs/5.3/about/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53aboutoverview"><span class="">About</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedaccessibility-li">
+  <input type="checkbox" id="m-docs53getting-startedaccessibility-check"/>
+  <label for="m-docs53getting-startedaccessibility-check"><a href="/docs/5.3/getting-started/accessibility/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedaccessibility"><span class="">Accessibility</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsaccordion-li">
+  <input type="checkbox" id="m-docs53componentsaccordion-check"/>
+  <label for="m-docs53componentsaccordion-check"><a href="/docs/5.3/components/accordion/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsaccordion"><span class="">Accordion</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsalerts-li">
+  <input type="checkbox" id="m-docs53componentsalerts-check"/>
+  <label for="m-docs53componentsalerts-check"><a href="/docs/5.3/components/alerts/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsalerts"><span class="">Alerts</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53extendapproach-li">
+  <input type="checkbox" id="m-docs53extendapproach-check"/>
+  <label for="m-docs53extendapproach-check"><a href="/docs/5.3/extend/approach/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53extendapproach"><span class="">Approach</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesbackground-li">
+  <input type="checkbox" id="m-docs53utilitiesbackground-check"/>
+  <label for="m-docs53utilitiesbackground-check"><a href="/docs/5.3/utilities/background/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesbackground"><span class="">Background</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsbadge-li">
+  <input type="checkbox" id="m-docs53componentsbadge-check"/>
+  <label for="m-docs53componentsbadge-check"><a href="/docs/5.3/components/badge/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsbadge"><span class="">Badges</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedbest-practices-li">
+  <input type="checkbox" id="m-docs53getting-startedbest-practices-check"/>
+  <label for="m-docs53getting-startedbest-practices-check"><a href="/docs/5.3/getting-started/best-practices/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedbest-practices"><span class="">Best practices</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedparcel-li">
+  <input type="checkbox" id="m-docs53getting-startedparcel-check"/>
+  <label for="m-docs53getting-startedparcel-check"><a href="/docs/5.3/getting-started/parcel/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedparcel"><span class="">Bootstrap and Parcel</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedvite-li">
+  <input type="checkbox" id="m-docs53getting-startedvite-check"/>
+  <label for="m-docs53getting-startedvite-check"><a href="/docs/5.3/getting-started/vite/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedvite"><span class="">Bootstrap and Vite</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedwebpack-li">
+  <input type="checkbox" id="m-docs53getting-startedwebpack-check"/>
+  <label for="m-docs53getting-startedwebpack-check"><a href="/docs/5.3/getting-started/webpack/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedwebpack"><span class="">Bootstrap and Webpack</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesborders-li">
+  <input type="checkbox" id="m-docs53utilitiesborders-check"/>
+  <label for="m-docs53utilitiesborders-check"><a href="/docs/5.3/utilities/borders/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesborders"><span class="">Borders</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53aboutbrand-li">
+  <input type="checkbox" id="m-docs53aboutbrand-check"/>
+  <label for="m-docs53aboutbrand-check"><a href="/docs/5.3/about/brand/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53aboutbrand"><span class="">Brand guidelines</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsbreadcrumb-li">
+  <input type="checkbox" id="m-docs53componentsbreadcrumb-check"/>
+  <label for="m-docs53componentsbreadcrumb-check"><a href="/docs/5.3/components/breadcrumb/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsbreadcrumb"><span class="">Breadcrumb</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53layoutbreakpoints-li">
+  <input type="checkbox" id="m-docs53layoutbreakpoints-check"/>
+  <label for="m-docs53layoutbreakpoints-check"><a href="/docs/5.3/layout/breakpoints/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53layoutbreakpoints"><span class="">Breakpoints</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedbrowsers-devices-li">
+  <input type="checkbox" id="m-docs53getting-startedbrowsers-devices-check"/>
+  <label for="m-docs53getting-startedbrowsers-devices-check"><a href="/docs/5.3/getting-started/browsers-devices/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedbrowsers-devices"><span class="">Browsers and devices</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsbutton-group-li">
+  <input type="checkbox" id="m-docs53componentsbutton-group-check"/>
+  <label for="m-docs53componentsbutton-group-check"><a href="/docs/5.3/components/button-group/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsbutton-group"><span class="">Button group</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsbuttons-li">
+  <input type="checkbox" id="m-docs53componentsbuttons-check"/>
+  <label for="m-docs53componentsbuttons-check"><a href="/docs/5.3/components/buttons/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsbuttons"><span class="">Buttons</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentscard-li">
+  <input type="checkbox" id="m-docs53componentscard-check"/>
+  <label for="m-docs53componentscard-check"><a href="/docs/5.3/components/card/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentscard"><span class="">Cards</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentscarousel-li">
+  <input type="checkbox" id="m-docs53componentscarousel-check"/>
+  <label for="m-docs53componentscarousel-check"><a href="/docs/5.3/components/carousel/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentscarousel"><span class="">Carousel</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53formschecks-radios-li">
+  <input type="checkbox" id="m-docs53formschecks-radios-check"/>
+  <label for="m-docs53formschecks-radios-check"><a href="/docs/5.3/forms/checks-radios/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53formschecks-radios"><span class="">Checks and radios</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53helpersclearfix-li">
+  <input type="checkbox" id="m-docs53helpersclearfix-check"/>
+  <label for="m-docs53helpersclearfix-check"><a href="/docs/5.3/helpers/clearfix/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53helpersclearfix"><span class="">Clearfix</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsclose-button-li">
+  <input type="checkbox" id="m-docs53componentsclose-button-check"/>
+  <label for="m-docs53componentsclose-button-check"><a href="/docs/5.3/components/close-button/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsclose-button"><span class="">Close button</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentscollapse-li">
+  <input type="checkbox" id="m-docs53componentscollapse-check"/>
+  <label for="m-docs53componentscollapse-check"><a href="/docs/5.3/components/collapse/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentscollapse"><span class="">Collapse</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53customizecolor-li">
+  <input type="checkbox" id="m-docs53customizecolor-check"/>
+  <label for="m-docs53customizecolor-check"><a href="/docs/5.3/customize/color/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53customizecolor"><span class="">Color</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53helperscolor-background-li">
+  <input type="checkbox" id="m-docs53helperscolor-background-check"/>
+  <label for="m-docs53helperscolor-background-check"><a href="/docs/5.3/helpers/color-background/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53helperscolor-background"><span class="">Color and background</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docs53customizecolor-modes-li">
+  <input type="checkbox" id="m-docs53customizecolor-modes-check" checked/>
+  <label for="m-docs53customizecolor-modes-check"><a href="/docs/5.3/customize/color-modes/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docs53customizecolor-modes"><span class="td-sidebar-nav-active-item">Color modes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53helperscolored-links-li">
+  <input type="checkbox" id="m-docs53helperscolored-links-check"/>
+  <label for="m-docs53helperscolored-links-check"><a href="/docs/5.3/helpers/colored-links/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53helperscolored-links"><span class="">Colored links</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiescolors-li">
+  <input type="checkbox" id="m-docs53utilitiescolors-check"/>
+  <label for="m-docs53utilitiescolors-check"><a href="/docs/5.3/utilities/colors/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiescolors"><span class="">Colors</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53layoutcolumns-li">
+  <input type="checkbox" id="m-docs53layoutcolumns-check"/>
+  <label for="m-docs53layoutcolumns-check"><a href="/docs/5.3/layout/columns/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53layoutcolumns"><span class="">Columns</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53customizecomponents-li">
+  <input type="checkbox" id="m-docs53customizecomponents-check"/>
+  <label for="m-docs53customizecomponents-check"><a href="/docs/5.3/customize/components/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53customizecomponents"><span class="">Components</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53layoutcontainers-li">
+  <input type="checkbox" id="m-docs53layoutcontainers-check"/>
+  <label for="m-docs53layoutcontainers-check"><a href="/docs/5.3/layout/containers/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53layoutcontainers"><span class="">Containers</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedcontents-li">
+  <input type="checkbox" id="m-docs53getting-startedcontents-check"/>
+  <label for="m-docs53getting-startedcontents-check"><a href="/docs/5.3/getting-started/contents/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedcontents"><span class="">Contents</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedcontribute-li">
+  <input type="checkbox" id="m-docs53getting-startedcontribute-check"/>
+  <label for="m-docs53getting-startedcontribute-check"><a href="/docs/5.3/getting-started/contribute/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedcontribute"><span class="">Contribute</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53layoutcss-grid-li">
+  <input type="checkbox" id="m-docs53layoutcss-grid-check"/>
+  <label for="m-docs53layoutcss-grid-check"><a href="/docs/5.3/layout/css-grid/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53layoutcss-grid"><span class="">CSS Grid</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53customizecss-variables-li">
+  <input type="checkbox" id="m-docs53customizecss-variables-check"/>
+  <label for="m-docs53customizecss-variables-check"><a href="/docs/5.3/customize/css-variables/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53customizecss-variables"><span class="">CSS variables</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53customizeoverview-li">
+  <input type="checkbox" id="m-docs53customizeoverview-check"/>
+  <label for="m-docs53customizeoverview-check"><a href="/docs/5.3/customize/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53customizeoverview"><span class="">Customize</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesdisplay-li">
+  <input type="checkbox" id="m-docs53utilitiesdisplay-check"/>
+  <label for="m-docs53utilitiesdisplay-check"><a href="/docs/5.3/utilities/display/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesdisplay"><span class="">Display property</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53docsref-li">
+  <input type="checkbox" id="m-docs53docsref-check"/>
+  <label for="m-docs53docsref-check"><a href="/docs/5.3/docsref/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53docsref"><span class="">Docs reference</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-starteddownload-li">
+  <input type="checkbox" id="m-docs53getting-starteddownload-check"/>
+  <label for="m-docs53getting-starteddownload-check"><a href="/docs/5.3/getting-started/download/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-starteddownload"><span class="">Download</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsdropdowns-li">
+  <input type="checkbox" id="m-docs53componentsdropdowns-check"/>
+  <label for="m-docs53componentsdropdowns-check"><a href="/docs/5.3/components/dropdowns/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsdropdowns"><span class="">Dropdowns</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docs53examples-li">
+  <input type="checkbox" id="m-docs53examples-check"/>
+  <label for="m-docs53examples-check"><a href="/docs/5.3/examples/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docs53examples"><span class="">Examples</span></a></label>
+  
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesalbum-li">
+  <input type="checkbox" id="m-docs53examplesalbum-check"/>
+  <label for="m-docs53examplesalbum-check"><a href="/docs/5.3/examples/album/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesalbum"><span class="">Album example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesbadges-li">
+  <input type="checkbox" id="m-docs53examplesbadges-check"/>
+  <label for="m-docs53examplesbadges-check"><a href="/docs/5.3/examples/badges/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesbadges"><span class="">Badges</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesblog-li">
+  <input type="checkbox" id="m-docs53examplesblog-check"/>
+  <label for="m-docs53examplesblog-check"><a href="/docs/5.3/examples/blog/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesblog"><span class="">Blog Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbar-bottom-li">
+  <input type="checkbox" id="m-docs53examplesnavbar-bottom-check"/>
+  <label for="m-docs53examplesnavbar-bottom-check"><a href="/docs/5.3/examples/navbar-bottom/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbar-bottom"><span class="">Bottom navbar example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesbreadcrumbs-li">
+  <input type="checkbox" id="m-docs53examplesbreadcrumbs-check"/>
+  <label for="m-docs53examplesbreadcrumbs-check"><a href="/docs/5.3/examples/breadcrumbs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesbreadcrumbs"><span class="">Breadcrumbs</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesbuttons-li">
+  <input type="checkbox" id="m-docs53examplesbuttons-check"/>
+  <label for="m-docs53examplesbuttons-check"><a href="/docs/5.3/examples/buttons/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesbuttons"><span class="">Buttons</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescarousel-li">
+  <input type="checkbox" id="m-docs53examplescarousel-check"/>
+  <label for="m-docs53examplescarousel-check"><a href="/docs/5.3/examples/carousel/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescarousel"><span class="">Carousel Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescheatsheet-li">
+  <input type="checkbox" id="m-docs53examplescheatsheet-check"/>
+  <label for="m-docs53examplescheatsheet-check"><a href="/docs/5.3/examples/cheatsheet/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescheatsheet"><span class="">Cheatsheet</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescheckout-li">
+  <input type="checkbox" id="m-docs53examplescheckout-check"/>
+  <label for="m-docs53examplescheckout-check"><a href="/docs/5.3/examples/checkout/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescheckout"><span class="">Checkout example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescover-li">
+  <input type="checkbox" id="m-docs53examplescover-check"/>
+  <label for="m-docs53examplescover-check"><a href="/docs/5.3/examples/cover/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescover"><span class="">Cover Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesdashboard-li">
+  <input type="checkbox" id="m-docs53examplesdashboard-check"/>
+  <label for="m-docs53examplesdashboard-check"><a href="/docs/5.3/examples/dashboard/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesdashboard"><span class="">Dashboard Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesdropdowns-li">
+  <input type="checkbox" id="m-docs53examplesdropdowns-check"/>
+  <label for="m-docs53examplesdropdowns-check"><a href="/docs/5.3/examples/dropdowns/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesdropdowns"><span class="">Dropdowns</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesfeatures-li">
+  <input type="checkbox" id="m-docs53examplesfeatures-check"/>
+  <label for="m-docs53examplesfeatures-check"><a href="/docs/5.3/examples/features/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesfeatures"><span class="">Features</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbar-fixed-li">
+  <input type="checkbox" id="m-docs53examplesnavbar-fixed-check"/>
+  <label for="m-docs53examplesnavbar-fixed-check"><a href="/docs/5.3/examples/navbar-fixed/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbar-fixed"><span class="">Fixed top navbar example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesfooters-li">
+  <input type="checkbox" id="m-docs53examplesfooters-check"/>
+  <label for="m-docs53examplesfooters-check"><a href="/docs/5.3/examples/footers/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesfooters"><span class="">Footers</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesgrid-li">
+  <input type="checkbox" id="m-docs53examplesgrid-check"/>
+  <label for="m-docs53examplesgrid-check"><a href="/docs/5.3/examples/grid/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesgrid"><span class="">Grid Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesheaders-li">
+  <input type="checkbox" id="m-docs53examplesheaders-check"/>
+  <label for="m-docs53examplesheaders-check"><a href="/docs/5.3/examples/headers/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesheaders"><span class="">Headers</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesheroes-li">
+  <input type="checkbox" id="m-docs53examplesheroes-check"/>
+  <label for="m-docs53examplesheroes-check"><a href="/docs/5.3/examples/heroes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesheroes"><span class="">Heroes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesjumbotron-li">
+  <input type="checkbox" id="m-docs53examplesjumbotron-check"/>
+  <label for="m-docs53examplesjumbotron-check"><a href="/docs/5.3/examples/jumbotron/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesjumbotron"><span class="">Jumbotron example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesjumbotrons-li">
+  <input type="checkbox" id="m-docs53examplesjumbotrons-check"/>
+  <label for="m-docs53examplesjumbotrons-check"><a href="/docs/5.3/examples/jumbotrons/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesjumbotrons"><span class="">Jumbotrons</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53exampleslist-groups-li">
+  <input type="checkbox" id="m-docs53exampleslist-groups-check"/>
+  <label for="m-docs53exampleslist-groups-check"><a href="/docs/5.3/examples/list-groups/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53exampleslist-groups"><span class="">List groups</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesmasonry-li">
+  <input type="checkbox" id="m-docs53examplesmasonry-check"/>
+  <label for="m-docs53examplesmasonry-check"><a href="/docs/5.3/examples/masonry/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesmasonry"><span class="">Masonry example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesmodals-li">
+  <input type="checkbox" id="m-docs53examplesmodals-check"/>
+  <label for="m-docs53examplesmodals-check"><a href="/docs/5.3/examples/modals/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesmodals"><span class="">Modals</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbars-offcanvas-li">
+  <input type="checkbox" id="m-docs53examplesnavbars-offcanvas-check"/>
+  <label for="m-docs53examplesnavbars-offcanvas-check"><a href="/docs/5.3/examples/navbars-offcanvas/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbars-offcanvas"><span class="">Navbar Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbars-li">
+  <input type="checkbox" id="m-docs53examplesnavbars-check"/>
+  <label for="m-docs53examplesnavbars-check"><a href="/docs/5.3/examples/navbars/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbars"><span class="">Navbar Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesoffcanvas-navbar-li">
+  <input type="checkbox" id="m-docs53examplesoffcanvas-navbar-check"/>
+  <label for="m-docs53examplesoffcanvas-navbar-check"><a href="/docs/5.3/examples/offcanvas-navbar/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesoffcanvas-navbar"><span class="">Offcanvas navbar template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplespricing-li">
+  <input type="checkbox" id="m-docs53examplespricing-check"/>
+  <label for="m-docs53examplespricing-check"><a href="/docs/5.3/examples/pricing/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplespricing"><span class="">Pricing example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesproduct-li">
+  <input type="checkbox" id="m-docs53examplesproduct-check"/>
+  <label for="m-docs53examplesproduct-check"><a href="/docs/5.3/examples/product/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesproduct"><span class="">Product example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplessidebars-li">
+  <input type="checkbox" id="m-docs53examplessidebars-check"/>
+  <label for="m-docs53examplessidebars-check"><a href="/docs/5.3/examples/sidebars/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplessidebars"><span class="">Sidebars</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplessign-in-li">
+  <input type="checkbox" id="m-docs53examplessign-in-check"/>
+  <label for="m-docs53examplessign-in-check"><a href="/docs/5.3/examples/sign-in/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplessign-in"><span class="">Signin Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesstarter-template-li">
+  <input type="checkbox" id="m-docs53examplesstarter-template-check"/>
+  <label for="m-docs53examplesstarter-template-check"><a href="/docs/5.3/examples/starter-template/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesstarter-template"><span class="">Starter Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplessticky-footer-navbar-li">
+  <input type="checkbox" id="m-docs53examplessticky-footer-navbar-check"/>
+  <label for="m-docs53examplessticky-footer-navbar-check"><a href="/docs/5.3/examples/sticky-footer-navbar/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplessticky-footer-navbar"><span class="">Sticky Footer Navbar Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplessticky-footer-li">
+  <input type="checkbox" id="m-docs53examplessticky-footer-check"/>
+  <label for="m-docs53examplessticky-footer-check"><a href="/docs/5.3/examples/sticky-footer/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplessticky-footer"><span class="">Sticky Footer Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbar-static-li">
+  <input type="checkbox" id="m-docs53examplesnavbar-static-check"/>
+  <label for="m-docs53examplesnavbar-static-check"><a href="/docs/5.3/examples/navbar-static/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbar-static"><span class="">Top navbar example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescarousel-rtl-li">
+  <input type="checkbox" id="m-docs53examplescarousel-rtl-check"/>
+  <label for="m-docs53examplescarousel-rtl-check"><a href="/docs/5.3/examples/carousel-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescarousel-rtl"><span class="">قالب  شرائح العرض</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesblog-rtl-li">
+  <input type="checkbox" id="m-docs53examplesblog-rtl-check"/>
+  <label for="m-docs53examplesblog-rtl-check"><a href="/docs/5.3/examples/blog-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesblog-rtl"><span class="">قالب المدونة</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesdashboard-rtl-li">
+  <input type="checkbox" id="m-docs53examplesdashboard-rtl-check"/>
+  <label for="m-docs53examplesdashboard-rtl-check"><a href="/docs/5.3/examples/dashboard-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesdashboard-rtl"><span class="">قالب لوحة القيادة</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescheckout-rtl-li">
+  <input type="checkbox" id="m-docs53examplescheckout-rtl-check"/>
+  <label for="m-docs53examplescheckout-rtl-check"><a href="/docs/5.3/examples/checkout-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescheckout-rtl"><span class="">مثال إتمام الشراء</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesalbum-rtl-li">
+  <input type="checkbox" id="m-docs53examplesalbum-rtl-check"/>
+  <label for="m-docs53examplesalbum-rtl-check"><a href="/docs/5.3/examples/album-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesalbum-rtl"><span class="">مثال الألبوم</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescheatsheet-rtl-li">
+  <input type="checkbox" id="m-docs53examplescheatsheet-rtl-check"/>
+  <label for="m-docs53examplescheatsheet-rtl-check"><a href="/docs/5.3/examples/cheatsheet-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescheatsheet-rtl"><span class="">ورقة الغش</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53contentfigures-li">
+  <input type="checkbox" id="m-docs53contentfigures-check"/>
+  <label for="m-docs53contentfigures-check"><a href="/docs/5.3/content/figures/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53contentfigures"><span class="">Figures</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesflex-li">
+  <input type="checkbox" id="m-docs53utilitiesflex-check"/>
+  <label for="m-docs53utilitiesflex-check"><a href="/docs/5.3/utilities/flex/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesflex"><span class="">Flex</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesfloat-li">
+  <input type="checkbox" id="m-docs53utilitiesfloat-check"/>
+  <label for="m-docs53utilitiesfloat-check"><a href="/docs/5.3/utilities/float/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesfloat"><span class="">Float</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53formsfloating-labels-li">
+  <input type="checkbox" id="m-docs53formsfloating-labels-check"/>
+  <label for="m-docs53formsfloating-labels-check"><a href="/docs/5.3/forms/floating-labels/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53formsfloating-labels"><span class="">Floating labels</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53helpersfocus-ring-li">
+  <input type="checkbox" id="m-docs53helpersfocus-ring-check"/>
+  <label for="m-docs53helpersfocus-ring-check"><a href="/docs/5.3/helpers/focus-ring/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53helpersfocus-ring"><span class="">Focus ring</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53formsform-control-li">
+  <input type="checkbox" id="m-docs53formsform-control-check"/>
+  <label for="m-docs53formsform-control-check"><a href="/docs/5.3/forms/form-control/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53formsform-control"><span class="">Form controls</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53formsoverview-li">
+  <input type="checkbox" id="m-docs53formsoverview-check"/>
+  <label for="m-docs53formsoverview-check"><a href="/docs/5.3/forms/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53formsoverview"><span class="">Forms</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedintroduction-li">
+  <input type="checkbox" id="m-docs53getting-startedintroduction-check"/>
+  <label for="m-docs53getting-startedintroduction-check"><a href="/docs/5.3/getting-started/introduction/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedintroduction"><span class="">Get started with Bootstrap</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsversions-li">
+  <input type="checkbox" id="m-docsversions-check"/>
+  <label for="m-docsversions-check"><a href="/docs/versions/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsversions"><span class="">Versions</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-404html-li">
+  <input type="checkbox" id="m-404html-check"/>
+  <label for="m-404html-check"><a href="/404.html" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-404html"><span class="">404 - File not found</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/docs/5.3/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#dark-mode">Dark mode</a></li>
+    <li><a href="#example">Example</a></li>
+    <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#enable-dark-mode">Enable dark mode</a></li>
+        <li><a href="#building-with-sass">Building with Sass</a></li>
+      </ul>
+    </li>
+    <li><a href="#custom-color-modes">Custom color modes</a></li>
+    <li><a href="#javascript">JavaScript</a></li>
+    <li><a href="#adding-theme-colors">Adding theme colors</a></li>
+    <li><a href="#css">CSS</a>
+      <ul>
+        <li><a href="#variables">Variables</a></li>
+        <li><a href="#sass-variables">Sass variables</a></li>
+        <li><a href="#sass-mixins">Sass mixins</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      <h5 class="taxonomy-title">Categories</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/class-1/" data-taxonomy-term="class-1"><span class="taxonomy-label">Class-1</span><span class="taxonomy-count">2</span></a></li>
+        </ul>
+    </div>
+  
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/"></a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/5.3/"></a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Color modes</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Color modes</h1>
+	<div class="lead">Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.</div>
+	<header class="article-meta">
+		
+<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; 9 minute read &nbsp;</p>
+</header>
+	<div class="bd-callout bd-callout-info">
+<strong>Try it yourself!</strong> Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the <a href="https://github.com/twbs/examples/tree/main/color-modes">twbs/examples repository</a>. You can also <a href="https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html">open the example in StackBlitz</a>.
+</div>
+
+<h2 id="dark-mode">Dark mode <a class="anchor-link" href="#dark-mode" aria-label="Link to this section: Dark mode"></a></h2>
+<p><strong>Bootstrap now supports color modes, starting with dark mode!</strong> With v5.3.0 you can implement your own color mode toggler (see below for an example from Bootstrap&rsquo;s docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the <code>&lt;html&gt;</code> element, or on specific components and elements, thanks to the <code>data-bs-theme</code> attribute.</p>
+<p>Alternatively, you can also switch to a media query implementation thanks to our color mode mixin—see <a href="#building-with-sass">the usage section for details</a>. Heads up though—this eliminates your ability to change themes on a per-component basis as shown below.</p>
+<h2 id="example">Example <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h2>
+<p>For example, to change the color mode of a dropdown menu, add <code>data-bs-theme=&quot;light&quot;</code> or <code>data-bs-theme=&quot;dark&quot;</code> to the parent <code>.dropdown</code>. Now, no matter the global color mode, these dropdowns will display with the specified theme value.</p>
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0 d-flex justify-content-between">
+    
+<div class="dropdown" data-bs-theme="light">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
+    Default dropdown
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
+    <li><a class="dropdown-item active" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+
+<div class="dropdown" data-bs-theme="dark">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
+    Dark dropdown
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
+    <li><a class="dropdown-item active" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+        <small class="font-monospace text-body-secondary text-uppercase">html</small>
+        <div class="d-flex ms-auto">
+          <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
+            <svg class="bi" aria-hidden="true"><use xlink:href="#lightning-charge-fill"/></svg>
+          </button>
+          <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+            <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
+          </button>
+        </div>
+      </div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown&#34;</span> <span style="color:#c4a000">data-bs-theme</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;light&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">button</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn btn-secondary dropdown-toggle&#34;</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;button&#34;</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdownMenuButtonLight&#34;</span> <span style="color:#c4a000">data-bs-toggle</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown&#34;</span> <span style="color:#c4a000">aria-expanded</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;false&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    Default dropdown
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">button</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">ul</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-menu&#34;</span> <span style="color:#c4a000">aria-labelledby</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdownMenuButtonLight&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item active&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Action<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Action<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Another action<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Something else here<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">hr</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-divider&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Separated link<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown&#34;</span> <span style="color:#c4a000">data-bs-theme</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dark&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">button</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn btn-secondary dropdown-toggle&#34;</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;button&#34;</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdownMenuButtonDark&#34;</span> <span style="color:#c4a000">data-bs-toggle</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown&#34;</span> <span style="color:#c4a000">aria-expanded</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;false&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    Dark dropdown
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">button</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">ul</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-menu&#34;</span> <span style="color:#c4a000">aria-labelledby</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdownMenuButtonDark&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item active&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Action<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Action<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Another action<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Something else here<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">hr</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-divider&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dropdown-item&#34;</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;#&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Separated link<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span></span></span></code></pre></div>
+</div>
+
+<h2 id="how-it-works">How it works <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
+<ul>
+<li>
+<p>As shown above, color mode styles are controlled by the <code>data-bs-theme</code> attribute. This attribute can be applied to the <code>&lt;html&gt;</code> element, or to any other element or Bootstrap component. If applied to the <code>&lt;html&gt;</code> element, it will apply to everything. If applied to a component or element, it will be scoped to that specific component or element.</p>
+</li>
+<li>
+<p>For each color mode you wish to support, you&rsquo;ll need to add new overrides for the shared global CSS variables. We do this already in our <code>_root.scss</code> stylesheet for dark mode, with light mode being the default values. In writing color mode specific styles, use the mixin:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Color mode variables in _root.scss
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">@include</span><span style="color:#5c35cc;font-weight:bold"> color-mode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00">dark</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8f5902;font-style:italic">// CSS variable overrides here...
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>We use a custom <code>_variables-dark.scss</code> to power those shared global CSS variable overrides for dark mode. This file isn&rsquo;t required for your own custom color modes, but it&rsquo;s required for our dark mode for two reasons. First, it&rsquo;s better to have a single place to reset global colors. Second, some Sass variables had to be overridden for background images embedded in our CSS for accordions, form components, and more.</p>
+</li>
+</ul>
+<h2 id="usage">Usage <a class="anchor-link" href="#usage" aria-label="Link to this section: Usage"></a></h2>
+<h3 id="enable-dark-mode">Enable dark mode <a class="anchor-link" href="#enable-dark-mode" aria-label="Link to this section: Enable dark mode"></a></h3>
+<p>Enable the built in dark color mode across your entire project by adding the <code>data-bs-theme=&quot;dark&quot;</code> attribute to the <code>&lt;html&gt;</code> element. This will apply the dark color mode to all components and elements, other than those with a specific <code>data-bs-theme</code> attribute applied. Building on the <a href="/docs/5.3/getting-started/introduction/#quick-start">quick start template</a>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">html</span> <span style="color:#c4a000">lang</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;en&#34;</span> <span style="color:#c4a000">data-bs-theme</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;dark&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">meta</span> <span style="color:#c4a000">charset</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;utf-8&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">meta</span> <span style="color:#c4a000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;viewport&#34;</span> <span style="color:#c4a000">content</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;width=device-width, initial-scale=1&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">&gt;</span>Bootstrap demo<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">link</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&#34;</span> <span style="color:#c4a000">rel</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;stylesheet&#34;</span> <span style="color:#c4a000">integrity</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH&#34;</span> <span style="color:#c4a000">crossorigin</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;anonymous&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">h1</span><span style="color:#000;font-weight:bold">&gt;</span>Hello, world!<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">h1</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span style="color:#c4a000">integrity</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz&#34;</span> <span style="color:#c4a000">crossorigin</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;anonymous&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">html</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span></code></pre></div><p>Bootstrap does not yet ship with a built-in color mode picker, but you can use the one from our own documentation if you like. <a href="#javascript">Learn more in the JavaScript section.</a></p>
+<h3 id="building-with-sass">Building with Sass <a class="anchor-link" href="#building-with-sass" aria-label="Link to this section: Building with Sass"></a></h3>
+<p>Our new dark mode option is available to use for all users of Bootstrap, but it&rsquo;s controlled via data attributes instead of media queries and does not automatically toggle your project&rsquo;s color mode. You can disable our dark mode entirely via Sass by changing <code>$enable-dark-mode</code> to <code>false</code>.</p>
+<p>We use a custom Sass mixin, <code>color-mode()</code>, to help you control <em>how</em> color modes are applied. By default, we use a <code>data</code> attribute approach, allowing you to create more user-friendly experiences where your visitors can choose to have an automatic dark mode or control their preference (like in our own docs here). This is also an easy and scalable way to add different themes and more custom color modes beyond light and dark.</p>
+<p>In case you want to use media queries and only make color modes automatic, you can change the mixin&rsquo;s default type via Sass variable. Consider the following snippet and its compiled CSS output.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#000">$color-mode-type</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@include</span><span style="color:#5c35cc;font-weight:bold"> color-mode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00">dark</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">.element</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs-primary-text-emphasis</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">background-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs-primary-bg-subtle</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Outputs to:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">data-bs-theme</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">dark</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">element</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">color</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">primary</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#204a87;font-weight:bold">text</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">emphasis</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">background-color</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">primary</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">bg</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">subtle</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>And when setting to <code>media-query</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#000">$color-mode-type</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">media-query</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@include</span><span style="color:#5c35cc;font-weight:bold"> color-mode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00">dark</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">.element</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs-primary-text-emphasis</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">background-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs-primary-bg-subtle</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>Outputs to:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">@</span><span style="color:#204a87;font-weight:bold">media</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">prefers-color-scheme</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">dark</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">.</span><span style="color:#000">element</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">color</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">primary</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#204a87;font-weight:bold">text</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">emphasis</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">background-color</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">primary</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">bg</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">subtle</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="custom-color-modes">Custom color modes <a class="anchor-link" href="#custom-color-modes" aria-label="Link to this section: Custom color modes"></a></h2>
+<p>While the primary use case for color modes is light and dark mode, custom color modes are also possible. Create your own <code>data-bs-theme</code> selector with a custom value as the name of your color mode, then modify our Sass and CSS variables as needed. We opted to create a separate <code>_variables-dark.scss</code> stylesheet to house Bootstrap&rsquo;s dark mode specific Sass variables, but that&rsquo;s not required for you.</p>
+<p>For example, you can create a &ldquo;blue theme&rdquo; with the selector <code>data-bs-theme=&quot;blue&quot;</code>. In your custom Sass or CSS file, add the new selector and override any global or component CSS variables as needed. If you&rsquo;re using Sass, you can also use Sass&rsquo;s functions within your CSS variable overrides.</p>
+<div class="bd-example-snippet bd-code-snippet bd-file-ref">
+    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
+      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/assets/scss/_content.scss">site/assets/scss/_content.scss</a>
+      <div class="d-flex ms-auto">
+        <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+          <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">data-bs-theme</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;blue&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c4a000">--bs-body-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs-white</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c4a000">--bs-body-color-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$white</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c4a000">--bs-body-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">var</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000">bs-blue</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c4a000">--bs-body-bg-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$blue</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c4a000">--bs-tertiary-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$blue-600</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">.dropdown-menu</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-dropdown-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">mix</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$blue-500</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$blue-600</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-dropdown-link-active-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$blue-700</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">.btn-secondary</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-btn-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">mix</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$gray-600</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$blue-400</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.5</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-btn-border-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">rgba</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$white</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.25</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-btn-hover-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">darken</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">mix</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$gray-600</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$blue-400</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.5</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-btn-hover-border-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">rgba</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$white</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.25</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-btn-active-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">darken</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">mix</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$gray-600</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$blue-400</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.5</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-btn-active-border-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">rgba</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$white</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.5</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-btn-focus-border-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">rgba</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$white</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.5</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c4a000">--bs-btn-focus-box-shadow</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">.25</span><span style="color:#204a87;font-weight:bold">rem</span> <span style="color:#000">rgba</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">255</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">255</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">255</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.2</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div></div>
+<div class="bd-example text-body bg-body" data-bs-theme="blue">
+  <div class="h4">Example blue theme</div>
+  <p>Some paragraph text to show how the blue theme might look with written copy.</p>
+  <hr class="my-4">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonCustom" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonCustom">
+      <li><a class="dropdown-item active" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">data-bs-theme</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;blue&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  ...
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span></code></pre></div><h2 id="javascript">JavaScript <a class="anchor-link" href="#javascript" aria-label="Link to this section: JavaScript"></a></h2>
+<p>To allow visitors or users to toggle color modes, you&rsquo;ll need to create a toggle element to control the <code>data-bs-theme</code> attribute on the root element, <code>&lt;html&gt;</code>. We&rsquo;ve built a toggler in our documentation that initially defers to a user&rsquo;s current system color mode, but provides an option to override that and pick a specific color mode.</p>
+<p>Here&rsquo;s a look at the JavaScript that powers it. Feel free to inspect our own documentation navbar to see how it&rsquo;s implemented using HTML and CSS from our own components. It is suggested to include the JavaScript at the top of your page to reduce potential screen flickering during reloading of your site. Note that if you decide to use media queries for your color modes, your JavaScript may need to be modified or removed if you prefer an implicit control.</p>
+<div class="bd-example-snippet bd-code-snippet"><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"></code></pre></div>
+</div>
+
+<h2 id="adding-theme-colors">Adding theme colors <a class="anchor-link" href="#adding-theme-colors" aria-label="Link to this section: Adding theme colors"></a></h2>
+<p>Adding a new color in <code>$theme-colors</code> is not enough for some of our components like <a href="/docs/5.3/components/alerts/">alerts</a> and <a href="/docs/5.3/components/list-group/">list groups</a>. New colors must also be defined in <code>$theme-colors-text</code>, <code>$theme-colors-bg-subtle</code>, and <code>$theme-colors-border-subtle</code> for light theme; but also in <code>$theme-colors-text-dark</code>, <code>$theme-colors-bg-subtle-dark</code>, and <code>$theme-colors-border-subtle-dark</code> for dark theme.</p>
+<p>This is a manual process because Sass cannot generate its own Sass variables from an existing variable or map. In future versions of Bootstrap, we&rsquo;ll revisit this setup to reduce the duplication.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Required
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">@import</span> <span style="color:#4e9a06">&#34;functions&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@import</span> <span style="color:#4e9a06">&#34;variables&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@import</span> <span style="color:#4e9a06">&#34;variables-dark&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Add a custom color to $theme-colors
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$custom-colors</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#4e9a06">&#34;custom-color&#34;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">#712cf9</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$theme-colors</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">map-merge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$theme-colors</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$custom-colors</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@import</span> <span style="color:#4e9a06">&#34;maps&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@import</span> <span style="color:#4e9a06">&#34;mixins&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@import</span> <span style="color:#4e9a06">&#34;utilities&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Add a custom color to new theme maps
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Light mode
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$custom-colors-text</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;custom-color&#34;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">#712cf9</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$custom-colors-bg-subtle</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;custom-color&#34;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">#e1d2fe</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$custom-colors-border-subtle</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;custom-color&#34;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">#bfa1fc</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$theme-colors-text</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">map-merge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$theme-colors-text</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$custom-colors-text</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$theme-colors-bg-subtle</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">map-merge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$theme-colors-bg-subtle</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$custom-colors-bg-subtle</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$theme-colors-border-subtle</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">map-merge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$theme-colors-border-subtle</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$custom-colors-border-subtle</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Dark mode
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">$custom-colors-text-dark</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;custom-color&#34;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">#e1d2f2</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$custom-colors-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;custom-color&#34;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">#8951fa</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$custom-colors-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;custom-color&#34;</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">#e1d2f2</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$theme-colors-text-dark</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">map-merge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$theme-colors-text-dark</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$custom-colors-text-dark</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$theme-colors-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">map-merge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$theme-colors-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$custom-colors-bg-subtle-dark</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$theme-colors-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">map-merge</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$theme-colors-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$custom-colors-border-subtle-dark</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Remainder of Bootstrap imports
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">@import</span> <span style="color:#4e9a06">&#34;root&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@import</span> <span style="color:#4e9a06">&#34;reboot&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// etc
+</span></span></span></code></pre></div><h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
+<h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
+<p>Dozens of root level CSS variables are repeated as overrides for dark mode. These are scoped to the color mode selector, which defaults to <code>data-bs-theme</code> but <a href="#building-with-sass">can be configured</a> to use a <code>prefers-color-scheme</code> media query. Use these variables as a guideline for generating your own new color modes.</p>
+<div class="bd-example-snippet bd-code-snippet bd-file-ref">
+    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
+      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_root.scss">scss/_root.scss</a>
+      <div class="d-flex ms-auto">
+        <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+          <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}body-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$body-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}body-color-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$body-color-dark</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}body-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$body-bg-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}body-bg-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$body-bg-dark</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}emphasis-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$body-emphasis-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}emphasis-color-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$body-emphasis-color-dark</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}secondary-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$body-secondary-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}secondary-color-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$body-secondary-color-dark</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}secondary-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$body-secondary-bg-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}secondary-bg-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$body-secondary-bg-dark</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}tertiary-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$body-tertiary-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}tertiary-color-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$body-tertiary-color-dark</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}tertiary-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$body-tertiary-bg-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}tertiary-bg-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$body-tertiary-bg-dark</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@each</span> <span style="color:#000">$color</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$value</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">$theme-colors-text-dark</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c4a000">--#{$prefix}#{$color}-text-emphasis</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$value</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@each</span> <span style="color:#000">$color</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$value</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">$theme-colors-bg-subtle-dark</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c4a000">--#{$prefix}#{$color}-bg-subtle</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$value</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@each</span> <span style="color:#000">$color</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$value</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">$theme-colors-border-subtle-dark</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c4a000">--#{$prefix}#{$color}-border-subtle</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$value</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}heading-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$headings-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}link-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$link-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}link-hover-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$link-hover-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}link-color-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$link-color-dark</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}link-hover-color-rgb</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">to-rgb</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$link-hover-color-dark</span><span style="color:#000;font-weight:bold">)</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}code-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$code-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}highlight-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$mark-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}highlight-bg</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$mark-bg-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}border-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$border-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}border-color-translucent</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$border-color-translucent-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}form-valid-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$form-valid-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}form-valid-border-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$form-valid-border-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}form-invalid-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$form-invalid-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">--#{$prefix}form-invalid-border-color</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">#{</span><span style="color:#000">$form-invalid-border-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#000;font-weight:bold">;</span></span></span></code></pre></div></div>
+<h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
+<p>CSS variables for our dark color mode are partially generated from dark mode specific Sass variables in <code>_variables-dark.scss</code>. This also includes some custom overrides for changing the colors of embedded SVGs used throughout our components.</p>
+<div class="bd-example-snippet bd-code-snippet bd-file-ref">
+    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
+      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables-dark.scss">scss/_variables-dark.scss</a>
+      <div class="d-flex ms-auto">
+        <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+          <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#000">$primary-text-emphasis-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>        <span style="color:#000">tint-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$primary</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$secondary-text-emphasis-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>      <span style="color:#000">tint-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$secondary</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$success-text-emphasis-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>        <span style="color:#000">tint-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$success</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$info-text-emphasis-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>           <span style="color:#000">tint-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$info</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$warning-text-emphasis-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>        <span style="color:#000">tint-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$warning</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$danger-text-emphasis-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>         <span style="color:#000">tint-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$danger</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$light-text-emphasis-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>          <span style="color:#000">$gray-100</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$dark-text-emphasis-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>           <span style="color:#000">$gray-300</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$primary-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>            <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$primary</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">80</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$secondary-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>          <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$secondary</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">80</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$success-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>            <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$success</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">80</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$info-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>               <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$info</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">80</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$warning-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>            <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$warning</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">80</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$danger-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>             <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$danger</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">80</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$light-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>              <span style="color:#000">$gray-800</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$dark-bg-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>               <span style="color:#000">mix</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$gray-800</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$black</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$primary-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>        <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$primary</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$secondary-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>      <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$secondary</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$success-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>        <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$success</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$info-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>           <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$info</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$warning-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>        <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$warning</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$danger-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>         <span style="color:#000">shade-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$danger</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$light-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>          <span style="color:#000">$gray-700</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$dark-border-subtle-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>           <span style="color:#000">$gray-800</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$body-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>                   <span style="color:#000">$gray-300</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$body-bg-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>                      <span style="color:#000">$gray-900</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$body-secondary-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>         <span style="color:#000">rgba</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$body-color-dark</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.75</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$body-secondary-bg-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>            <span style="color:#000">$gray-800</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$body-tertiary-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>          <span style="color:#000">rgba</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$body-color-dark</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.5</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$body-tertiary-bg-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>             <span style="color:#000">mix</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$gray-800</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$gray-900</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">50</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$body-emphasis-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>          <span style="color:#000">$white</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$border-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>                 <span style="color:#000">$gray-700</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$border-color-translucent-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>     <span style="color:#000">rgba</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$white</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.15</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$headings-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>               <span style="color:#ce5c00">inherit</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$link-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>                   <span style="color:#000">tint-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$primary</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$link-hover-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>             <span style="color:#000">shift-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$link-color-dark</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">$link-shade-percentage</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$code-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>                   <span style="color:#000">tint-color</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$code-color</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">40</span><span style="color:#204a87;font-weight:bold">%</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$mark-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>                   <span style="color:#000">$body-color-dark</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$mark-bg-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>                      <span style="color:#000">$yellow-800</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Forms
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$form-select-indicator-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>  <span style="color:#000">$body-color-dark</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$form-select-indicator-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>        <span style="color:#4e9a06">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 16 16&#39;&gt;&lt;path fill=&#39;none&#39; stroke=&#39;</span><span style="color:#4e9a06">#{</span><span style="color:#000">$form-select-indicator-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#39; stroke-linecap=&#39;round&#39; stroke-linejoin=&#39;round&#39; stroke-width=&#39;2&#39; d=&#39;m2 5 6 6 6-6&#39;/&gt;&lt;/svg&gt;&#34;)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$form-switch-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>            <span style="color:#000">rgba</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$white</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">.25</span><span style="color:#000;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$form-switch-bg-image-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>         <span style="color:#4e9a06">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;-4 -4 8 8&#39;&gt;&lt;circle r=&#39;3&#39; fill=&#39;</span><span style="color:#4e9a06">#{</span><span style="color:#000">$form-switch-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#39;/&gt;&lt;/svg&gt;&#34;)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$form-valid-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>             <span style="color:#000">$green-300</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$form-valid-border-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>      <span style="color:#000">$green-300</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$form-invalid-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>           <span style="color:#000">$red-300</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$form-invalid-border-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>    <span style="color:#000">$red-300</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Accordion
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$accordion-icon-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>         <span style="color:#000">$primary-text-emphasis-dark</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$accordion-icon-active-color-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>  <span style="color:#000">$primary-text-emphasis-dark</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$accordion-button-icon-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>         <span style="color:#4e9a06">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 16 16&#39; fill=&#39;</span><span style="color:#4e9a06">#{</span><span style="color:#000">$accordion-icon-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#39;&gt;&lt;path fill-rule=&#39;evenodd&#39; d=&#39;M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">$accordion-button-active-icon-dark</span><span style="color:#ce5c00;font-weight:bold">:</span>  <span style="color:#4e9a06">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 16 16&#39; fill=&#39;</span><span style="color:#4e9a06">#{</span><span style="color:#000">$accordion-icon-active-color-dark</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#39;&gt;&lt;path fill-rule=&#39;evenodd&#39; d=&#39;M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span style="color:#000;font-weight:bold">;</span>
+</span></span></code></pre></div></div>
+<h3 id="sass-mixins">Sass mixins <a class="anchor-link" href="#sass-mixins" aria-label="Link to this section: Sass mixins"></a></h3>
+<p>Styles for dark mode, and any custom color modes you create, can be scoped appropriately to the <code>data-bs-theme</code> attribute selector or media query with the customizable <code>color-mode()</code> mixin. See the <a href="#building-with-sass">Sass usage section</a> for more details.</p>
+<div class="bd-example-snippet bd-code-snippet bd-file-ref">
+    <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
+      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/mixins/_color-mode.scss">scss/mixins/_color-mode.scss</a>
+      <div class="d-flex ms-auto">
+        <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+          <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
+        </button>
+      </div>
+    </div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">@mixin</span><span style="color:#000"> color-mode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">$mode</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#ce5c00">light</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">$root</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">false</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">@if</span> <span style="color:#000">$color-mode-type</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#4e9a06">&#34;media-query&#34;</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">@if</span> <span style="color:#000">$root</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#000">true</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">@media</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">prefers-color-scheme</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">$mode</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#5c35cc;font-weight:bold">:root</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">@content</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">@else</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">@media</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">prefers-color-scheme</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">$mode</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">@content</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">@else</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">data-bs-theme</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;</span><span style="color:#4e9a06">#{</span><span style="color:#000">$mode</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">@content</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div></div>
+
+	
+
+<style>
+  .feedback--title {
+    font-size: x-large;
+    font-weight: bold;
+    display: block;
+  }
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<p class="feedback--title">Feedback</p>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! 
+
+<style>
+  #span-16fb334e.email-feedback:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="email-feedback" data-user="kcabdeef-emt-abura" data-domain="moc.eph" id="span-16fb334e"></span>&#32;
+
+<script id="script-16fb334e">
+  var scriptTag = document.getElementById("script-16fb334e");
+  var link = document.createElement("a");
+  var address = "kcabdeef-emt-abura".split('').reverse().join('') + "@" + "moc.eph".split('').reverse().join('') + "?" + "A0%A0%:stnemmoCA0%A0%\/sedom-roloc\/ezimotsuc\/3.5\/scod\/3131:tsohlacol\/\/:ptth02%:LRUA0%A0%sedom02%roloC02%:eltit02%egaP=ydob\u0026sedom02%roloC02%-02%KCABDEEF=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "Please let us know how we can improve.";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+ </p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. 
+
+<style>
+  #span-8ac2334c.email-feedback:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="email-feedback" data-user="kcabdeef-emt-abura" data-domain="moc.eph" id="span-8ac2334c"></span>&#32;
+
+<script id="script-8ac2334c">
+  var scriptTag = document.getElementById("script-8ac2334c");
+  var link = document.createElement("a");
+  var address = "kcabdeef-emt-abura".split('').reverse().join('') + "@" + "moc.eph".split('').reverse().join('') + "?" + "A0%A0%:stnemmoCA0%A0%\/sedom-roloc\/ezimotsuc\/3.5\/scod\/3131:tsohlacol\/\/:ptth02%:LRUA0%A0%sedom02%roloC02%:eltit02%egaP=ydob\u0026sedom02%roloC02%-02%KCABDEEF=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "Please let us know how we can improve.";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+ </p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="" aria-label="">
+    <a target="_blank" rel="noopener" href="" aria-label="">
+      <i class=""></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Hewlett Packard Enterprise Development LP</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+
+<script src="/js/tocbot.min.js"></script>
+<script type="text/javascript">
+    tocbot.init({
+        
+        tocSelector: '.td-toc',
+        
+        contentSelector: '.td-content',
+        
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        
+        ignoreHiddenElements: true,
+        
+        
+        
+        
+        
+        collapseDepth: '3 ',
+        
+        scrollSmooth: false,
+        
+        ignoreSelector: 'default-ignore',
+        
+        scrollContainer: 'td-content',
+    });
+</script>
+
+  </body>
+</html>

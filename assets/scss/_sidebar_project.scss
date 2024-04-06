@@ -1,0 +1,119 @@
+// Left sidebar
+.td-sidebar {
+    @include media-breakpoint-up(md) {
+      padding-top: $td-heading-offset-min;
+      background-color: $td-sidebar-bg-color;
+      padding-right: 1rem;
+      border-right: 1px solid $td-sidebar-border-color;
+    }
+  
+    padding-bottom: 1rem;
+  
+    &__toggle {
+      line-height: 1;
+      color: $gray-900;
+      margin: 1rem;
+    }
+  
+    &__search {
+      padding: 1rem 0;
+    }
+  
+    &__inner {
+      order: 0;
+  
+      @include media-breakpoint-up(md) {
+        @supports (position: sticky) {
+          position: sticky;
+          top: $td-heading-offset-min;
+          z-index: 10;
+          height: calc(100vh - 5rem);
+        }
+      }
+  
+      @include media-breakpoint-up(xl) {
+        flex: 0 1 320px;
+      }
+  
+      .td-search-box {
+        width: 100%;
+      }
+    }
+
+    #content-desktop {
+        display: block;
+      }
+      #content-mobile {
+        display: none;
+      }
+    
+      @include media-breakpoint-down(lg) {
+        #content-desktop {
+          display: none;
+        }
+        #content-mobile {
+          display: block;
+        }
+      }
+    }
+
+// Left sidebar navigation elements
+.td-sidebar-nav {
+  padding: 0px;
+  &__section-title {
+    a {
+      color: $td-sidebar-link-color;
+    }
+  }
+  .td-sidebar-link {
+    &__page {
+      color: $td-sidebar-link-color;
+    }
+  }
+  a {
+    &:hover {
+      color: $td-sidebar-link-color;
+      text-decoration: none;
+      font-weight: $font-weight-bold;
+    }
+/*    &.active:not(.tree-root) {
+      border-width: 1px;
+      border-style: solid;
+      border-image: linear-gradient(to left, rgba($td-sidebar-bg-color, 0) 30%, rgba($td-sidebar-button-active-color, 0.3) 60%, $td-sidebar-button-active-color 90% 100%) 1;
+      padding: 0.25rem;
+      padding-left: 0.5rem !important;
+      color: $td-sidebar-link-active-color;
+    }
+    &.active.tree-root {
+        border-image: linear-gradient(to left, rgba($td-sidebar-bg-color, 0) 30%, rgba($td-sidebar-button-active-color, 0.3) 60%, $td-sidebar-button-active-color 90% 100%) 1;
+      padding: 0.25rem;
+      color: $td-sidebar-link-active-color;
+    } */
+  }
+}
+
+// Foldable sidebar menu
+nav.foldable-nav {
+
+  .ul-1 .with-child > label:before {
+    color: $gray-900;
+  }
+
+  .ul-1 .with-child > input:checked ~ label:before {
+    color: $gray-900;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  nav.foldable-nav {
+    .ul-1 .with-child > label:hover:before {
+      color: $gray-900;
+      transition: color 0.3s;
+    }
+
+    .ul-1 .with-child > input:checked ~ label:hover:before {
+      color: $gray-900;
+      transition: color 0.3s;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+// Overrides for various CSS provided by Bootstrap, primarily from _reboot.scss
+
+// Links in content
+a {
+    color: $link-color;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: $link-color;
+    text-decoration: underline;
+  }
+  
+  a:not([href]):not([class]),
+  a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
+// force right margin for figures to avoid using entire content column
+  figure {
+    margin-right: 3rem;
+  }

@@ -1,0 +1,25 @@
+@import "bootstrap_project.scss";
+@import "utilities_project.scss";
+@import "boxes_project.scss";
+@import "nav_project.scss";
+@import "search_project.scss";
+@import "sidebar_project.scss";
+@import "sidebar_toc_project.scss";
+@import "tocbot_project.scss";
+@import "main_project.scss";
+@import "alerts_project.scss";
+
+//Top band - new bar across the top of the page for aesthetic purposes
+.top-band {
+  height: 1rem;
+  width: 100%;
+  background-color: $black;
+  top: 0;
+  position: fixed;
+  display: none;
+  z-index: 50;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}

@@ -1,0 +1,243 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+	<meta name="generator" content="Hugo 0.123.8"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>TechDocs - WLAN, SD-Branch, &amp; Location Services</title>
+<meta name="description" content="ClearPass
+">
+<meta property="og:title" content="HPE Aruba Networking" />
+<meta property="og:description" content="ClearPass
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/" />
+
+<meta itemprop="name" content="HPE Aruba Networking">
+<meta itemprop="description" content="ClearPass
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="HPE Aruba Networking"/>
+<meta name="twitter:description" content="ClearPass
+"/>
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-home">
+    <header>
+      <div class="top-band"></div>
+<nav class="td-navbar js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 942.71 313.37" style="enable-background:new 0 0 942.71 313.37"><style>.st0{fill:#ff8300}</style><g><path class="st0" d="M744.81 79.56c-7.86.0-15.15 2.33-21.29 6.27v-5.94C722.78 64.11 709.88 59 706.5 57.38h-.38v98.28s11.58-1.25 15.92-7.6c6.38 4.61 14.24 7.35 22.77 7.35 21.38.0 38.69-16.99 38.69-37.92S766.14 79.56 744.81 79.56zm0 58.9c-11.87.0-21.45-9.43-21.45-21.02.0-11.59 9.59-21.02 21.45-21.02 11.87.0 21.43 9.43 21.43 21.02C766.24 129.03 756.63 138.46 744.81 138.46zM826.62 79.56c-21.38.0-38.71 16.99-38.71 37.92s17.31 37.92 38.71 37.92c8.82.0 16.95-2.91 23.49-7.81 4 6.56 15.2 7.81 15.2 7.81v-37.92C865.31 96.55 847.95 79.56 826.62 79.56zm0 58.9c-11.87.0-21.45-9.43-21.45-21.02.0-11.59 9.59-21.02 21.45-21.02 11.87.0 21.43 9.43 21.43 21.02S838.44 138.46 826.62 138.46zM518.07 79.56c-21.34.0-38.68 16.99-38.68 37.92s17.34 37.92 38.68 37.92c8.86.0 16.97-2.91 23.48-7.81 4 6.56 15.2 7.81 15.2 7.81v-37.92C556.75 96.55 539.45 79.56 518.07 79.56zm0 58.9c-11.82.0-21.42-9.43-21.42-21.02.0-11.59 9.6-21.02 21.42-21.02s21.46 9.43 21.46 21.02C539.53 129.03 529.93 138.46 518.07 138.46zM603.05 79.56c4.91.0 9.56.91 13.88 2.53v20.02c-3.69-3.16-8.56-5.11-13.88-5.11-11.7.0-21.13 9.3-21.13 20.73v37.67h-17.8V86.62s7.29.33 12.03 3.57c7-6.56 16.47-10.68 26.94-10.68M698.43 117.36c-.1 20.98-16.68 38.01-37.03 38.01s-36.96-17.03-37.08-38.01v-32.4s17.64 4.4 17.81 23.39v8.81c0 11.46 8.63 20.77 19.22 20.77s19.25-9.31 19.25-20.77v-18.4c.74-15.83 14-20.89 17.43-22.52h.36v41.16L698.43 117.36z"/><path d="M207.37 77.4v142.78h-37.43v-56.5h-55.09v56.5H77.4V77.4h37.43v54.16h55.09V77.4h37.45zm94.71 50.21c0 10.71-6.02 17.9-19.54 17.9H260.9v-35.79h21.65C296.06 109.71 302.08 116.9 302.08 127.61zm-15.63 49.08c30.95.0 51.89-17.19 51.89-49.08S317.4 78.3 286.45 78.3h-62.52v142.78h36.96v-44.39h25.56zm62.6-98.39v142.78h102.06V188.8h-65.33v-24.7h59.78v-31.42h-59.78v-22.27h65.33V78.3H349.05z"/><path d="M489.95 183.01v3.49c2.04-2.38 5.79-4.34 10.22-4.34 8.6.0 13.46 5.62 13.46 14.05v24.87h-10.56v-22.65c0-4-2.04-6.73-6.22-6.73-3.24.0-6.05 1.96-6.9 5.28v24.1h-10.56v-38.06h10.56zm41.04 21.46c.85 6.22 5.36 8.77 10.99 8.77 4.17.0 7.15-.94 10.9-3.32v8.69c-3.15 2.3-7.41 3.32-12.52 3.32-11.58.0-19.5-7.49-19.5-19.59.0-11.92 7.49-20.18 17.88-20.18 11.07.0 16.78 7.66 16.78 18.9v3.41H530.99zM531.33 197.57h14.39c-.25-4.09-2.55-6.98-6.73-6.98C535.5 190.59 532.52 192.8 531.33 197.57zm36.02 23.5v-29.55h-7.24V183h7.24v-10.3h10.56V183H586v8.52h-8.09v29.55H567.35zM634.54 183.01h10.22l-11.58 38.06h-9.71l-6.22-23.33-6.22 23.33h-9.71l-11.58-38.06h10.56l6.81 24.27 6.22-24.27h8.09l6.3 24.27L634.54 183.01zm32.61 38.92c-11.07.0-18.65-8.17-18.65-19.84.0-11.75 7.58-19.93 18.65-19.93 11.07.0 18.65 8.17 18.65 19.93C685.8 213.75 678.22 221.93 667.15 221.93zm0-30.83c-5.28.0-8.17 4.6-8.17 10.99.0 6.3 2.9 10.9 8.17 10.9 5.28.0 8.17-4.6 8.17-10.9C675.33 195.7 672.43 191.1 667.15 191.1zM716.46 193.4c-1.45-.85-3.32-1.28-5.28-1.28-3.58.0-6.47 1.87-7.24 5.36v23.59h-10.56v-38.06h10.56v3.75c1.62-2.72 4.77-4.6 8.52-4.6 1.79.0 3.41.34 4 .68V193.4zm31.93 27.67-13.71-17.54v17.54h-10.56v-55.35h10.56v32.36l13.03-15.07h12.69l-15.84 17.46 16.18 20.61H748.39zm23.08-43c-3.41.0-6.3-2.47-6.3-6.05.0-3.49 2.9-6.05 6.3-6.05 3.32.0 6.22 2.55 6.22 6.05C777.68 175.6 774.79 178.07 771.47 178.07zM766.19 221.07v-38.06h10.56v38.06H766.19zm31.16-38.06v3.49c2.04-2.38 5.79-4.34 10.22-4.34 8.6.0 13.46 5.62 13.46 14.05v24.87h-10.56v-22.65c0-4-2.04-6.73-6.22-6.73-3.24.0-6.05 1.96-6.9 5.28v24.1h-10.56v-38.06H797.35zm57.4 33.72c-1.7 1.96-5.02 3.83-9.28 3.83-10.99.0-17.2-8.86-17.2-19.16.0-10.39 6.22-19.25 17.2-19.25 4.26.0 7.58 1.87 9.28 3.83V183h10.56v33.89c0 13.96-10.3 19.07-20.69 19.07-5.19.0-10.05-1.28-13.11-3.24v-10.39c3.92 3.41 8 4.68 12.94 4.68 5.7.0 10.3-2.89 10.3-9.11V216.73zm0-21.8c-1.19-2.13-3.92-3.92-7.07-3.92-5.62.0-8.86 4.34-8.86 10.39.0 5.96 3.24 10.3 8.86 10.3 3.15.0 5.88-1.7 7.07-3.92V194.93z"/></g></svg></span><span class="navbar-brand__name">TechDocs - WLAN, SD-Branch, &amp; Location Services</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://networkingsupport.hpe.com/" target="_blank" rel="noopener"><span>HPE Networking Support Portal</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.arubanetworks.com/techdocs/ArubaDocPortal/content/docportal.htm" target="_blank" rel="noopener"><span>Documentation Portal</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+  </div>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
+  <a href="/" title="HPE Aruba Networking" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="td-sidebar-nav-active-item">Home</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-posts-li">
+  <input type="checkbox" id="m-posts-check"/>
+  <label for="m-posts-check"><a href="/posts/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-posts"><span class="">Posts</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-postsclearpass-extension-000-li">
+  <input type="checkbox" id="m-postsclearpass-extension-000-check"/>
+  <label for="m-postsclearpass-extension-000-check"><a href="/posts/clearpass-extension-000/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-postsclearpass-extension-000"><span class="">ClearPass Extensions</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-postsintune-extension-000-li">
+  <input type="checkbox" id="m-postsintune-extension-000-check"/>
+  <label for="m-postsintune-extension-000-check"><a href="/posts/intune-extension-000/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-postsintune-extension-000"><span class="">Intune Extension</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+
+</div>
+
+            
+            <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      <h5 class="taxonomy-title">Categories</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/class-1/" data-taxonomy-term="class-1"><span class="taxonomy-label">Class-1</span><span class="taxonomy-count">2</span></a></li>
+        </ul>
+    </div>
+  
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs td-breadcrumbs__single">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item active" aria-current="page">
+    Home</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>HPE Aruba Networking</h1>
+  <div class="lead">ClearPass</div>
+	<header class="article-meta">
+		
+</header>
+	
+  <div class="section-index">
+    
+    
+    </div>
+<div class="td-page-meta__lastmod">
+  Last modified: March 14, 2024 (643399e)
+</div>
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="" aria-label="">
+    <a target="_blank" rel="noopener" href="" aria-label="">
+      <i class=""></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Hewlett Packard Enterprise Development LP</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+
+<script src="/js/tocbot.min.js"></script>
+<script type="text/javascript">
+    tocbot.init({
+        
+        tocSelector: '.td-toc',
+        
+        contentSelector: '.td-content',
+        
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        
+        ignoreHiddenElements: true,
+        
+        
+        
+        
+        
+        collapseDepth: '3 ',
+        
+        scrollSmooth: false,
+        
+        ignoreSelector: 'default-ignore',
+        
+        scrollContainer: 'td-content',
+    });
+</script>
+
+  </body>
+</html>

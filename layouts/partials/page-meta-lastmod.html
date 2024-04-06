@@ -1,0 +1,6 @@
+{{ if .GitInfo -}}
+<div class="td-page-meta__lastmod">
+  {{ T "post_last_mod" }}: {{ .Lastmod.Format .Site.Params.time_format_default -}}
+  {{ with .GitInfo }} {{/* Trim WS */ -}} ({{ .AbbreviatedHash }}) {{- /* Trim WS */ -}} {{- end }}
+</div>
+{{ end -}}

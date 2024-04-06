@@ -1,0 +1,40 @@
+.td-404 main,
+.td-main main {
+  //padding-top: 1.5rem;
+  padding-top: 0;
+  padding-bottom: 2rem;
+  @include media-breakpoint-up(md) {
+    padding-top: calc(1.5rem + #{$td-navbar-height-min});
+  }
+}
+
+// Adjust anchors vs the fixed menu.
+@include media-breakpoint-up(md) {
+  .td-offset-anchor:target {
+    top: -$td-heading-offset-min;
+  }
+
+  h2[id]:before,
+  h3[id]:before,
+  h4[id]:before,
+  h5[id]:before,
+  h6[id]:before {
+    margin-top: calc(-#{$td-heading-offset-min} - 1rem);
+    height: calc(#{$td-heading-offset-min} + 1rem);
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .td-offset-anchor:target {
+    top: -$td-navbar-height-min;
+  }
+
+  h2[id]:before,
+  h3[id]:before,
+  h4[id]:before,
+  h5[id]:before,
+  h6[id]:before {
+    margin-top: calc(-#{$td-navbar-height-min} - 1rem);
+    height: calc(#{$td-navbar-height-min} + 1rem);
+  }
+}

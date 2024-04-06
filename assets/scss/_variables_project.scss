@@ -1,0 +1,132 @@
+// Adjust header size
+$td-topbar-height-min: 1rem;
+$td-navbar-height-min: 6rem;
+$td-heading-offset-min: $td-topbar-height-min + $td-navbar-height-min;
+
+// Bootstrap options
+
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Theme colors
+
+$hpe-green: #01A982;
+$hpe-dk-blue: #0D5265;
+$hpe-md-blue: #32DAC8;
+$hpe-lt-blue: #7FF9E2;
+$hpe-md-purp: #7630EA;
+$hpe-lt-purp: #C140FF;
+$hpe-yellow: #FEC901;
+$aruba-orange: #ff8300;
+$aruba-gray: #f6f6f6;
+
+$primary: $aruba-orange;
+$secondary: $aruba-gray;
+$success: $hpe-green;
+$info: $hpe-dk-blue;
+$warning: $aruba-orange;
+//$danger: #ed6a5a;
+$danger: #c71e08;
+$light: #d3f3ee;
+$dark: #403f4c;
+
+$code-color: shade-color($secondary, 40%);
+
+// UI element colors
+
+$border-color: $secondary;
+
+// Navbar
+
+$navbar-dark-color: rgba($white, 0.75);
+$navbar-dark-hover-color: rgba($white, 0.5);
+$navbar-light-color: rgba($black, 0.65);
+$navbar-light-hover-color: rgba($black, 0.9);
+
+//Lefthand sidebar with site table of contents
+$td-sidebar-tree-root-color: $primary;
+$td-sidebar-bg-color: $secondary;
+$td-sidebar-border-color: $border-color;
+$td-sidebar-link-color: $primary;
+$td-sidebar-link-active-color: $primary;
+$td-sidebar-active-button-color: $black;
+$td-sidebar-button-active-color: $black;
+
+// Righthand sidebar with intra-page table of contents
+$td-sidebar-toc-bg-color: $td-sidebar-bg-color;
+$td-sidebar-toc-indicator-color: $primary;
+
+// Background colors for the sections on home page etc. It is a paint by number
+// system, starting at 0, where the number is taken from the shortcode's ordinal
+// if not provided by the user. These colors are all part of the theme palette,
+// but the mix is fairly random to create variation. This can be overridden by
+// the project if needed.
+$td-box-colors: $dark, $primary, $secondary, $info, $white, $gray-600, $success,
+  $warning, $dark, $danger, $primary, $secondary, $info;
+
+$link-color: $primary;
+$link-shade-percentage: 0%;
+
+// Pagination
+
+$pagination-color: $gray-600; // TODO: consider using BS default
+$pagination-disabled-color: $gray-300; // TODO: consider using BS default
+
+// Fonts
+
+$td-enable-google-fonts: false;
+$td-enable-google-fonts-ms: true;
+
+$google_font_name: "Open Sans";
+$google_font_family: "Open+Sans:300,300i,400,400i,700,700i";
+$web-font-path: "https://fonts.googleapis.com/css?family=#{$google_font_family}&display=swap";
+$google_font_ms_name: "Source Code Pro";
+$google_font_ms_family: "Source+Code+Pro:300,300i,400,400i,700,700i";
+$web-font_ms-path: "https://fonts.googleapis.com/css?family=#{$google_font_ms_family}&display=swap";
+$font-awesome-font-name: "Font Awesome 6 Free";
+
+//$td-fonts-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+//  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+//  "Segoe UI Symbol";
+
+$td-fonts-serif: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+
+@if $td-enable-google-fonts {
+  $td-fonts-serif: join("#{$google_font_name}", $td-fonts-serif);
+}
+
+$font-family-sans-serif: $td-fonts-serif; // TODO: consider moving into UG SCSS or namespace the var (td-)
+
+$td-fonts-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+@if $td-enable-google-fonts-ms {
+    $td-fonts-monospace: join("#{$google_font_ms_name}", $td-fonts-monospace);
+}
+
+$font-family-monospace: $td-fonts-monospace;
+$font-family-base: $font-family-sans-serif; // TODO: consider moving into UG SCSS or namespace the var (td-)
+
+// Font weights
+
+$font-weight-medium: 500; // TODO: move into var forward file after upgrading BS to v5.3+
+
+$font-weight-body-text: $font-weight-normal;
+
+// Heading sizes
+
+$h3-font-size: $font-size-base * 1.5;  // TODO: consider using BS default (* 1.75), or moving into UG SCSS
+$h4-font-size: $font-size-base * 1.35; // TODO: consider using BS default (* 1.5), or moving into UG SCSS
+$h5-font-size: $font-size-base * 1.15; // TODO: consider using BS default (* 1.25), or moving into UG SCSS
+
+// Space
+
+$td-block-space-top-base: 4 * $spacer;
+$td-block-space-bottom-base: 4 * $spacer;
+
+// Footer
+
+$list-inline-padding: $spacer;
+$td-footer-color: $dark;
+$td-footer-bg-color: $secondary;

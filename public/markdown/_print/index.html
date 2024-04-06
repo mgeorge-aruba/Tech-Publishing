@@ -1,0 +1,1038 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="http://localhost:1313/markdown/">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Markdown Examples | TechDocs - WLAN, SD-Branch, &amp; Location Services</title>
+<meta name="description" content="Markdown examples in action
+">
+<meta property="og:title" content="Markdown Examples" />
+<meta property="og:description" content="Markdown examples in action
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/markdown/" />
+
+<meta itemprop="name" content="Markdown Examples">
+<meta itemprop="description" content="Markdown examples in action
+"><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Markdown Examples"/>
+<meta name="twitter:description" content="Markdown examples in action
+"/>
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <div class="top-band"></div>
+<nav class="td-navbar js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 942.71 313.37" style="enable-background:new 0 0 942.71 313.37"><style>.st0{fill:#ff8300}</style><g><path class="st0" d="M744.81 79.56c-7.86.0-15.15 2.33-21.29 6.27v-5.94C722.78 64.11 709.88 59 706.5 57.38h-.38v98.28s11.58-1.25 15.92-7.6c6.38 4.61 14.24 7.35 22.77 7.35 21.38.0 38.69-16.99 38.69-37.92S766.14 79.56 744.81 79.56zm0 58.9c-11.87.0-21.45-9.43-21.45-21.02.0-11.59 9.59-21.02 21.45-21.02 11.87.0 21.43 9.43 21.43 21.02C766.24 129.03 756.63 138.46 744.81 138.46zM826.62 79.56c-21.38.0-38.71 16.99-38.71 37.92s17.31 37.92 38.71 37.92c8.82.0 16.95-2.91 23.49-7.81 4 6.56 15.2 7.81 15.2 7.81v-37.92C865.31 96.55 847.95 79.56 826.62 79.56zm0 58.9c-11.87.0-21.45-9.43-21.45-21.02.0-11.59 9.59-21.02 21.45-21.02 11.87.0 21.43 9.43 21.43 21.02S838.44 138.46 826.62 138.46zM518.07 79.56c-21.34.0-38.68 16.99-38.68 37.92s17.34 37.92 38.68 37.92c8.86.0 16.97-2.91 23.48-7.81 4 6.56 15.2 7.81 15.2 7.81v-37.92C556.75 96.55 539.45 79.56 518.07 79.56zm0 58.9c-11.82.0-21.42-9.43-21.42-21.02.0-11.59 9.6-21.02 21.42-21.02s21.46 9.43 21.46 21.02C539.53 129.03 529.93 138.46 518.07 138.46zM603.05 79.56c4.91.0 9.56.91 13.88 2.53v20.02c-3.69-3.16-8.56-5.11-13.88-5.11-11.7.0-21.13 9.3-21.13 20.73v37.67h-17.8V86.62s7.29.33 12.03 3.57c7-6.56 16.47-10.68 26.94-10.68M698.43 117.36c-.1 20.98-16.68 38.01-37.03 38.01s-36.96-17.03-37.08-38.01v-32.4s17.64 4.4 17.81 23.39v8.81c0 11.46 8.63 20.77 19.22 20.77s19.25-9.31 19.25-20.77v-18.4c.74-15.83 14-20.89 17.43-22.52h.36v41.16L698.43 117.36z"/><path d="M207.37 77.4v142.78h-37.43v-56.5h-55.09v56.5H77.4V77.4h37.43v54.16h55.09V77.4h37.45zm94.71 50.21c0 10.71-6.02 17.9-19.54 17.9H260.9v-35.79h21.65C296.06 109.71 302.08 116.9 302.08 127.61zm-15.63 49.08c30.95.0 51.89-17.19 51.89-49.08S317.4 78.3 286.45 78.3h-62.52v142.78h36.96v-44.39h25.56zm62.6-98.39v142.78h102.06V188.8h-65.33v-24.7h59.78v-31.42h-59.78v-22.27h65.33V78.3H349.05z"/><path d="M489.95 183.01v3.49c2.04-2.38 5.79-4.34 10.22-4.34 8.6.0 13.46 5.62 13.46 14.05v24.87h-10.56v-22.65c0-4-2.04-6.73-6.22-6.73-3.24.0-6.05 1.96-6.9 5.28v24.1h-10.56v-38.06h10.56zm41.04 21.46c.85 6.22 5.36 8.77 10.99 8.77 4.17.0 7.15-.94 10.9-3.32v8.69c-3.15 2.3-7.41 3.32-12.52 3.32-11.58.0-19.5-7.49-19.5-19.59.0-11.92 7.49-20.18 17.88-20.18 11.07.0 16.78 7.66 16.78 18.9v3.41H530.99zM531.33 197.57h14.39c-.25-4.09-2.55-6.98-6.73-6.98C535.5 190.59 532.52 192.8 531.33 197.57zm36.02 23.5v-29.55h-7.24V183h7.24v-10.3h10.56V183H586v8.52h-8.09v29.55H567.35zM634.54 183.01h10.22l-11.58 38.06h-9.71l-6.22-23.33-6.22 23.33h-9.71l-11.58-38.06h10.56l6.81 24.27 6.22-24.27h8.09l6.3 24.27L634.54 183.01zm32.61 38.92c-11.07.0-18.65-8.17-18.65-19.84.0-11.75 7.58-19.93 18.65-19.93 11.07.0 18.65 8.17 18.65 19.93C685.8 213.75 678.22 221.93 667.15 221.93zm0-30.83c-5.28.0-8.17 4.6-8.17 10.99.0 6.3 2.9 10.9 8.17 10.9 5.28.0 8.17-4.6 8.17-10.9C675.33 195.7 672.43 191.1 667.15 191.1zM716.46 193.4c-1.45-.85-3.32-1.28-5.28-1.28-3.58.0-6.47 1.87-7.24 5.36v23.59h-10.56v-38.06h10.56v3.75c1.62-2.72 4.77-4.6 8.52-4.6 1.79.0 3.41.34 4 .68V193.4zm31.93 27.67-13.71-17.54v17.54h-10.56v-55.35h10.56v32.36l13.03-15.07h12.69l-15.84 17.46 16.18 20.61H748.39zm23.08-43c-3.41.0-6.3-2.47-6.3-6.05.0-3.49 2.9-6.05 6.3-6.05 3.32.0 6.22 2.55 6.22 6.05C777.68 175.6 774.79 178.07 771.47 178.07zM766.19 221.07v-38.06h10.56v38.06H766.19zm31.16-38.06v3.49c2.04-2.38 5.79-4.34 10.22-4.34 8.6.0 13.46 5.62 13.46 14.05v24.87h-10.56v-22.65c0-4-2.04-6.73-6.22-6.73-3.24.0-6.05 1.96-6.9 5.28v24.1h-10.56v-38.06H797.35zm57.4 33.72c-1.7 1.96-5.02 3.83-9.28 3.83-10.99.0-17.2-8.86-17.2-19.16.0-10.39 6.22-19.25 17.2-19.25 4.26.0 7.58 1.87 9.28 3.83V183h10.56v33.89c0 13.96-10.3 19.07-20.69 19.07-5.19.0-10.05-1.28-13.11-3.24v-10.39c3.92 3.41 8 4.68 12.94 4.68 5.7.0 10.3-2.89 10.3-9.11V216.73zm0-21.8c-1.19-2.13-3.92-3.92-7.07-3.92-5.62.0-8.86 4.34-8.86 10.39.0 5.96 3.24 10.3 8.86 10.3 3.15.0 5.88-1.7 7.07-3.92V194.93z"/></g></svg></span><span class="navbar-brand__name">TechDocs - WLAN, SD-Branch, &amp; Location Services</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://networkingsupport.hpe.com/" target="_blank" rel="noopener"><span>HPE Networking Support Portal</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.arubanetworks.com/techdocs/ArubaDocPortal/content/docportal.htm" target="_blank" rel="noopener"><span>Documentation Portal</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+  </div>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/markdown/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Markdown Examples</h1>
+<div class="lead">Markdown examples in action</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="alert alert-info" role="alert">
+<div class="alert-heading">Draft Status</div>
+
+    This page is marked as a draft and as such should not be rendered at the server.
+
+</div>
+<p>Text can be normal, <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
+<p><a href="/docs/">Link to another page</a>.</p>
+<p>There should be whitespace between paragraphs.</p>
+<p>There should be whitespace between paragraphs.</p>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Text can be normal, **bold**, _italic_, or ~~strikethrough~~.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Link to another page](/docs/).
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Link to another page using relref](<span style="color:#8f5902;font-style:italic">{{</span><span style="color:#a40000">&lt;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">relref</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;base-dir/path&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">&gt;</span><span style="color:#8f5902;font-style:italic">}}</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>There should be whitespace between paragraphs.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>There should be whitespace between paragraphs.
+</span></span></code></pre></div></div>
+  </div>
+
+<h2 id="headings-in-the-document-start-at-header-2">Headings in the document start at header 2 <a class="anchor-link" href="#headings-in-the-document-start-at-header-2" aria-label="Link to this section: Headings in the document start at header 2"></a></h2>
+<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
+<h3 id="header-3">Header 3 <a class="anchor-link" href="#header-3" aria-label="Link to this section: Header 3"></a></h3>
+<blockquote>
+<p>This is a blockquote following a header.</p>
+<p>When something is important enough, you do it even if the odds are not in your favor.</p>
+</blockquote>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&gt; This is a blockquote following a header.
+</span></span><span style="display:flex;"><span>&gt;
+</span></span><span style="display:flex;"><span>&gt; When something is important enough, you do it even if the odds are not in your favor.
+</span></span></code></pre></div></div>
+  </div>
+
+<h4 id="header-4">Header 4 <a class="anchor-link" href="#header-4" aria-label="Link to this section: Header 4"></a></h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h5 id="header-5">Header 5 <a class="anchor-link" href="#header-5" aria-label="Link to this section: Header 5"></a></h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h6 id="header-6">Header 6</h6>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2 id="lists">Lists <a class="anchor-link" href="#lists" aria-label="Link to this section: Lists"></a></h2>
+<p>Ordered (numbered) and unordered (bulleted) lists</p>
+<h3 id="unordered-list">Unordered list <a class="anchor-link" href="#unordered-list" aria-label="Link to this section: Unordered list"></a></h3>
+<ul>
+<li>
+<p>This is an unordered list following a header.</p>
+</li>
+<li>
+<p>This is an unordered list following a header.</p>
+</li>
+<li>
+<p>This is an unordered list following a header.</p>
+</li>
+</ul>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- This is an unordered list following a header.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- This is an unordered list following a header.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- This is an unordered list following a header.
+</span></span></code></pre></div></div>
+  </div>
+
+<h3 id="ordered-list">Ordered list <a class="anchor-link" href="#ordered-list" aria-label="Link to this section: Ordered list"></a></h3>
+<ol>
+<li>
+<p>This is an ordered list following a header.</p>
+</li>
+<li>
+<p>This is an ordered list following a header.</p>
+</li>
+<li>
+<p>This is an ordered list following a header.</p>
+</li>
+</ol>
+<p>An ordered list without specifying the ordinals, allowing automatic renumbering:</p>
+<ol>
+<li>
+<p>Item one</p>
+</li>
+<li>
+<p>Item two</p>
+</li>
+<li>
+<p>Item three</p>
+</li>
+<li>
+<p>Item four</p>
+</li>
+</ol>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. This is an ordered list following a header.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. This is an ordered list following a header.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. This is an ordered list following a header.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>An ordered list without specifying the ordinals, allowing automatic renumbering:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. Item one
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. Item two
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. Item three
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. Item four
+</span></span></code></pre></div></div>
+  </div>
+
+<h3 id="ordered-list-continued">Ordered list, continued <a class="anchor-link" href="#ordered-list-continued" aria-label="Link to this section: Ordered list, continued"></a></h3>
+
+
+<div class="alert alert-warning" role="alert">
+<div class="alert-heading">Warning</div>
+
+    Not available or working currently.
+
+</div>
+<ol>
+<li>Item one</li>
+<li>Item two</li>
+</ol>
+<p>Some text</p>
+<ol style="counter-reset:none;">
+<li>Item three</li>
+<li>Item four</li>
+</ol>
+<p>An ordered list starting from 42:</p>
+<ol>
+<li>Item 42</li>
+<li>Item 43</li>
+<li>Item 44</li>
+</ol>
+<h3 id="and-a-multi-levelnested-list">And a multi-level/nested list <a class="anchor-link" href="#and-a-multi-levelnested-list" aria-label="Link to this section: And a multi-level/nested list"></a></h3>
+<ul>
+<li>
+<p>level 1 item</p>
+<ul>
+<li>
+<p>level 2 item</p>
+</li>
+<li>
+<p>level 2 item</p>
+<ul>
+<li>
+<p>level 3 item</p>
+</li>
+<li>
+<p>level 3 item</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>level 1 item</p>
+<ul>
+<li>
+<p>level 2 item</p>
+</li>
+<li>
+<p>level 2 item</p>
+</li>
+<li>
+<p>level 2 item</p>
+</li>
+</ul>
+</li>
+<li>
+<p>level 1 item</p>
+<ul>
+<li>
+<p>level 2 item</p>
+</li>
+<li>
+<p>level 2 item</p>
+</li>
+</ul>
+</li>
+<li>
+<p>level 1 item</p>
+</li>
+</ul>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - level 2 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - level 2 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - level 3 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    - level 3 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - level 2 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - level 2 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - level 2 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - level 2 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - level 2 item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item
+</span></span></code></pre></div></div>
+  </div>
+
+<h3 id="nesting-an-ol-in-ul">Nesting an ol in ul <a class="anchor-link" href="#nesting-an-ol-in-ul" aria-label="Link to this section: Nesting an ol in ul"></a></h3>
+<p>Nesting of mixed lists types only goes one deep</p>
+<ul>
+<li>
+<p>level 1 item (ul)</p>
+<ol>
+<li>
+<p>level 2 item (ol)</p>
+</li>
+<li>
+<p>level 2 item (ol)</p>
+</li>
+</ol>
+</li>
+<li>
+<p>level 1 item (ul)</p>
+<ol>
+<li>
+<p>level 2 item (ol)</p>
+</li>
+<li>
+<p>level 2 item (ol)</p>
+</li>
+</ol>
+</li>
+<li>
+<p>level 1 item (ul)</p>
+<ol>
+<li>
+<p>level 2 item (ol)</p>
+</li>
+<li>
+<p>level 2 item (ol)</p>
+</li>
+</ol>
+</li>
+</ul>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item (ul)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  1. level 2 item (ol)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  1. level 2 item (ol)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item (ul)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  1. level 2 item (ol)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  1. level 2 item (ol)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item (ul)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  1. level 2 item (ol)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  1. level 2 item (ol)
+</span></span></code></pre></div></div>
+  </div>
+
+<h3 id="and-a-task-list">And a task list <a class="anchor-link" href="#and-a-task-list" aria-label="Link to this section: And a task list"></a></h3>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> Hello, this is a TODO item</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> Hello, this is another TODO item</p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox"> Goodbye, this item is done</p>
+</li>
+</ul>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] Hello, this is a TODO item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] Hello, this is another TODO item
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [x] Goodbye, this item is done
+</span></span></code></pre></div></div>
+  </div>
+
+<h3 id="nesting-task-lists">Nesting task lists <a class="anchor-link" href="#nesting-task-lists" aria-label="Link to this section: Nesting task lists"></a></h3>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> level 1 item (task)</p>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> level 2 item (task)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> level 2 item (task)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> level 1 item (task)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> level 1 item (task)</p>
+</li>
+</ul>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] level 1 item (task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - [ ] level 2 item (task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - [ ] level 2 item (task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] level 1 item (task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] level 1 item (task)
+</span></span></code></pre></div></div>
+  </div>
+
+<h3 id="nesting-a-ul-in-a-task-list">Nesting a ul in a task list <a class="anchor-link" href="#nesting-a-ul-in-a-task-list" aria-label="Link to this section: Nesting a ul in a task list"></a></h3>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> level 1 item (task)</p>
+<ul>
+<li>
+<p>level 2 item (ul)</p>
+</li>
+<li>
+<p>level 2 item (ul)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> level 1 item (task)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> level 1 item (task)</p>
+</li>
+</ul>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] level 1 item (task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - level 2 item (ul)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - level 2 item (ul)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] level 1 item (task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] level 1 item (task)
+</span></span></code></pre></div></div>
+  </div>
+
+<h3 id="nesting-a-task-list-in-a-ul">Nesting a task list in a ul <a class="anchor-link" href="#nesting-a-task-list-in-a-ul" aria-label="Link to this section: Nesting a task list in a ul"></a></h3>
+<ul>
+<li>
+<p>level 1 item (ul)</p>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> level 2 item (task)</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> level 2 item (task)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>level 1 item (ul)</p>
+</li>
+<li>
+<p>level 1 item (ul)</p>
+</li>
+</ul>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item (ul)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - [ ] level 2 item (task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - [ ] level 2 item (task)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item (ul)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- level 1 item (ul)
+</span></span></code></pre></div></div>
+  </div>
+
+<h2 id="overflow-behaviors">Overflow behaviors <a class="anchor-link" href="#overflow-behaviors" aria-label="Link to this section: Overflow behaviors"></a></h2>
+<p><a href=".">This is a very long link (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.) which wraps and therefore doesn&rsquo;t overflow even when it comes at the beginning</a> of the line.</p>
+<ul>
+<li><a href=".">This is a very long link (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.) which wraps and therefore doesn&rsquo;t overflow the line when used first in an item</a> in a list.</li>
+</ul>
+<h2 id="table">Table <a class="anchor-link" href="#table" aria-label="Link to this section: Table"></a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">head1</th>
+<th style="text-align:left">head two</th>
+<th style="text-align:left">three</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ok</td>
+<td style="text-align:left">good swedish fish</td>
+<td style="text-align:left">nice</td>
+</tr>
+<tr>
+<td style="text-align:left">out of stock</td>
+<td style="text-align:left">good and plenty</td>
+<td style="text-align:left">nice</td>
+</tr>
+<tr>
+<td style="text-align:left">ok</td>
+<td style="text-align:left">good <code>oreos</code></td>
+<td style="text-align:left">hmm</td>
+</tr>
+<tr>
+<td style="text-align:left">ok</td>
+<td style="text-align:left">good <code>zoute</code> drop</td>
+<td style="text-align:left">yumm</td>
+</tr>
+<tr>
+<td style="text-align:left">unordered lists in cells</td>
+<td style="text-align:left"><ul><li>HTML</li><li>Required</li></ul></td>
+<td style="text-align:left">possible</td>
+</tr>
+<tr>
+<td style="text-align:left">ordered lists in cells</td>
+<td style="text-align:left"><ol><li>HTML</li><li>Required</li></ol></td>
+<td style="text-align:left">possible</td>
+</tr>
+</tbody>
+</table>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>| head1        | head two          | three |
+</span></span><span style="display:flex;"><span>|:-------------|:------------------|:------|
+</span></span><span style="display:flex;"><span>| ok           | good swedish fish | nice  |
+</span></span><span style="display:flex;"><span>| out of stock | good and plenty   | nice  |
+</span></span><span style="display:flex;"><span>| ok           | good `oreos`      | hmm   |
+</span></span><span style="display:flex;"><span>| ok           | good `zoute` drop | yumm  |
+</span></span><span style="display:flex;"><span>| unordered lists in cells | <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>HTML<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>Required<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">ul</span><span style="color:#000;font-weight:bold">&gt;</span> | possible |
+</span></span><span style="display:flex;"><span>| ordered lists in cells | <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">ol</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>HTML<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;</span>Required<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">li</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">ol</span><span style="color:#000;font-weight:bold">&gt;</span> | possible |
+</span></span></code></pre></div></div>
+  </div>
+
+<h2 id="theres-a-horizontal-rule-below-this">There&rsquo;s a horizontal rule below this <a class="anchor-link" href="#theres-a-horizontal-rule-below-this" aria-label="Link to this section: There&rsquo;s a horizontal rule below this"></a></h2>
+<hr>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>* * *
+</span></span></code></pre></div></div>
+  </div>
+
+<h2 id="images">Images <a class="anchor-link" href="#images" aria-label="Link to this section: Images"></a></h2>
+<p>Setting a byline requires defining a resource and the byline in the frontmatter</p>
+<h3 id="small-image">Small image <a class="anchor-link" href="#small-image" aria-label="Link to this section: Small image"></a></h3>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 210px">
+<img class="card-img-top" src="/markdown/library_hu434c0e2b9ce8926c3ba229a1f34d02c3_1528428_200x0_resize_q75_catmullrom.jpg" width="200" height="133">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+<p>Wroclaw University Library digitizing rare archival texts
+<small class="text-body-secondary"><br/><em>Photo</em>: Bjørn Erik Pedersen / CC-BY-SA</small></p>
+</p>
+</figcaption>
+</figure>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#a40000">%</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">imgproc</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">library</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Resize</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">200x</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">%</span><span style="color:#8f5902;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>Wroclaw University Library digitizing rare archival texts
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#a40000">%</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">/</span><span style="color:#000">imgproc</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">%</span><span style="color:#8f5902;font-style:italic">}}</span>
+</span></span></code></pre></div></div>
+  </div>
+
+<h3 id="large-image">Large image <a class="anchor-link" href="#large-image" aria-label="Link to this section: Large image"></a></h3>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+<img class="card-img-top" src="/markdown/library_hu434c0e2b9ce8926c3ba229a1f34d02c3_1528428_600x600_fit_q75_catmullrom.jpg" width="600" height="399">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+<p>Wroclaw University Library digitizing rare archival texts
+<small class="text-body-secondary"><br/><em>Photo</em>: Bjørn Erik Pedersen / CC-BY-SA</small></p>
+</p>
+</figcaption>
+</figure>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#a40000">%</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">imgproc</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">library</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Fit</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">600x600</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">%</span><span style="color:#8f5902;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>Wroclaw University Library digitizing rare archival texts
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#a40000">%</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">/</span><span style="color:#000">imgproc</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">%</span><span style="color:#8f5902;font-style:italic">}}</span>
+</span></span></code></pre></div></div>
+  </div>
+
+<h2 id="callouts">Callouts <a class="anchor-link" href="#callouts" aria-label="Link to this section: Callouts"></a></h2>
+<p>Callouts are enabled by using the <code>alert</code> shortcode. The title of a callout is specified in the <code>title</code> field of the shortcode, with the color of the shortcode being optional.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#a40000">%</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">alert</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">title</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;&lt;title for the callout&gt;&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">color</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;&lt;color from theme&gt;&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">%</span><span style="color:#8f5902;font-style:italic">}}</span>
+</span></span><span style="display:flex;"><span>This is a generic callout that uses the specified coloring.
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">{{</span><span style="color:#a40000">%</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">/</span><span style="color:#000">alert</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#a40000">%</span><span style="color:#8f5902;font-style:italic">}}</span>
+</span></span></code></pre></div>
+
+<div class="alert alert-primary" role="alert">
+<div class="alert-heading">Callout</div>
+
+    This is a generic callout that has color unspecified so uses the primary coloring.
+
+</div>
+
+
+<div class="alert alert-info" role="alert">
+<div class="alert-heading">Note</div>
+
+    <p>This is a note callout, specifying the <code>info</code> color. <a href="#callouts">Example of a link</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>code block for testing
+</span></span><span style="display:flex;"><span>this is inside a callout
+</span></span><span style="display:flex;"><span>interesting results
+</span></span></code></pre></div>
+
+</div>
+
+
+<div class="alert alert-warning" role="alert">
+<div class="alert-heading">Warning</div>
+
+    <p>This is a warning callout, specifying the <code>warning</code> color. <a href="#callouts">Example of a link</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>code block for testing
+</span></span><span style="display:flex;"><span>this is inside a callout
+</span></span><span style="display:flex;"><span>interesting results
+</span></span></code></pre></div>
+
+</div>
+
+
+<div class="alert alert-danger" role="alert">
+<div class="alert-heading">Danger</div>
+
+    <p>This is a danger callout, specifying the <code>danger</code> color. <a href="#callouts">Example of a link</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>code block for testing
+</span></span><span style="display:flex;"><span>this is inside a callout
+</span></span><span style="display:flex;"><span>interesting results
+</span></span></code></pre></div>
+
+</div>
+<h2 id="mermaid-diagrams">Mermaid Diagrams <a class="anchor-link" href="#mermaid-diagrams" aria-label="Link to this section: Mermaid Diagrams"></a></h2>
+<p><a href="https://mermaid.js.org/syntax/examples.html">Examples of diagrams available with Mermaid - https://mermaid.js.org/syntax/examples.html</a></p>
+<pre class="mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;</pre>
+<pre class="mermaid">sequenceDiagram
+    participant Client
+    participant AP
+    participant Gateway
+    Client-&gt;&gt;AP: Associate
+    AP-&gt;&gt;Gateway: Authenticate
+    Gateway-&gt;&gt;AP: Attributes
+    AP-&gt;&gt;Client: 4 Way</pre>
+<pre class="mermaid">%%{
+  init: {
+    &#39;theme&#39;: &#39;base&#39;,
+    &#39;themeVariables&#39;: {
+      &#39;darkMode&#39;: false,
+      &#39;background&#39;: &#39;#fff&#39;,
+      &#39;fontFamily&#39;: &#39;Open Source Pro, arial&#39;,
+      &#39;textColor&#39;: &#39;#000&#39;,
+      &#39;primaryColor&#39;: &#39;#ff8300&#39;,
+      &#39;primaryBorderColor&#39;: &#39;#ff8300&#39;,
+      &#39;primaryTextColor&#39;: &#39;#fff&#39;,
+      &#39;secondaryColor&#39;: &#39;#01A982&#39;,
+      &#39;tertiaryColor&#39;: &#39;#7FF9E2&#39;,
+      &#39;noteBkgColor&#39;: &#39;#f6f6f6&#39;,
+      &#39;noteTextColor&#39;: &#39;#000&#39;
+    }
+  }
+}%%
+sequenceDiagram
+    participant Client
+    participant AP
+    participant RADIUS Server
+    participant Captive Portal
+    participant Web Server
+
+    Client-&gt;&gt;Web Server: HTTP/HTTPS - Give me page
+    AP-&gt;&gt;Client: HTTP/HTTPS - The page you are&lt;br /&gt;looking for is at&lt;br /&gt;https://captiveportal.dom.tld/path/page
+    Client-&gt;&gt;Captive Portal: HTTPS - give me page https://captiveportal.dom.tld/path/page
+    Captive Portal-&gt;&gt;Client: HTTPS - here is page https://captiveportal.dom.tld/path/page
+    loop Captive portal process
+      Client-&gt;&gt;Captive Portal: HTTPS - providing information
+    end
+    Captive Portal-&gt;&gt;Client: HTTPS - Post your credentials to the AP
+    Client-&gt;&gt;AP: HTTPS - Here are my credentials
+    AP-&gt;&gt;RADIUS Server: RADIUS - Check these credentials
+    loop AuthZ/AuthN
+      RADIUS Server-&gt;&gt;RADIUS Server: AuthN/AuthZ
+    end
+    RADIUS Server-&gt;&gt;AP: RADIUS - ACCEPT or REJECT
+    loop Change User Role
+      AP-&gt;&gt;AP: Assign client role based on result
+    end
+    Note over Client,Web Server: Assuming correctly authenticated and proper role assigned
+    Client-&gt;&gt;Web Server: HTTP/HTTPS - Give me page
+    Web Server-&gt;&gt;Client: HTTP/HTTPS - Here is page</pre>
+<h2 id="collapsed-section">Collapsed Section <a class="anchor-link" href="#collapsed-section" aria-label="Link to this section: Collapsed Section"></a></h2>
+<p>The following uses the <a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections"><code>&lt;details&gt;</code></a> tag to create a collapsed section.</p>
+<details markdown="block">
+<summary>Shopping list (click me!)</summary>
+<p>This is content inside a <code>&lt;details&gt;</code> dropdown.</p>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> Apples</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> Oranges</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> Milk</p>
+</li>
+</ul>
+</details>
+
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">details</span> <span style="color:#c4a000">markdown</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;block&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">summary</span><span style="color:#000;font-weight:bold">&gt;</span>Shopping list (click me!)<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">summary</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This is content inside a `<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">details</span><span style="color:#000;font-weight:bold">&gt;</span>` dropdown.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] Apples
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] Oranges
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- [ ] Milk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">details</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span></code></pre></div></div>
+  </div>
+
+<h2 id="code-blocks">Code Blocks <a class="anchor-link" href="#code-blocks" aria-label="Link to this section: Code Blocks"></a></h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Javascript code with syntax highlighting.
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">fun</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">function</span> <span style="color:#000">lang</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">l</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">dateformat</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">i18n</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">require</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;./lang/&#39;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">l</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Ruby code with syntax highlighting</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">GitHubPages</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">Dependencies</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">gems</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">each</span> <span style="color:#204a87;font-weight:bold">do</span> <span style="color:#ce5c00;font-weight:bold">|</span><span style="color:#000">gem</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">version</span><span style="color:#ce5c00;font-weight:bold">|</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000">s</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">add_dependency</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">gem</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;= </span><span style="color:#4e9a06">#{</span><span style="color:#000">version</span><span style="color:#4e9a06">}</span><span style="color:#4e9a06">&#34;</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">end</span>
+</span></span></code></pre></div>
+    <div class="td-card card border me-4">
+<div class="card-header bg-white">
+      Example markdown source for above
+    </div>
+<div class="card-body code p-0 m-0">
+    <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>```js
+</span></span><span style="display:flex;"><span>// Javascript code with syntax highlighting.
+</span></span><span style="display:flex;"><span>var fun = function lang(l) {
+</span></span><span style="display:flex;"><span>  dateformat.i18n = require(&#39;./lang/&#39; + l)
+</span></span><span style="display:flex;"><span>  return true;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>```
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>```ruby
+</span></span><span style="display:flex;"><span># Ruby code with syntax highlighting
+</span></span><span style="display:flex;"><span>GitHubPages::Dependencies.gems.each do |gem, version|
+</span></span><span style="display:flex;"><span>  s.add_dependency(gem, &#34;= #{version}&#34;)
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>```
+</span></span></code></pre></div></div>
+  </div>
+
+<h3 id="more-code">More code <a class="anchor-link" href="#more-code" aria-label="Link to this section: More code"></a></h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">dump_args</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">func</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;This decorator dumps out the arguments passed to a function before calling it&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">argnames</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">func</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">func_code</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">co_varnames</span><span style="color:#000;font-weight:bold">[:</span><span style="color:#000">func</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">func_code</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">co_argcount</span><span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">fname</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">func</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">func_name</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">echo_func</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">args</span><span style="color:#000;font-weight:bold">,</span><span style="color:#ce5c00;font-weight:bold">**</span><span style="color:#000">kwargs</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87">print</span> <span style="color:#000">fname</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;, &#39;</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">join</span><span style="color:#000;font-weight:bold">(</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#4e9a06">&#39;</span><span style="color:#4e9a06">%s</span><span style="color:#4e9a06">=</span><span style="color:#4e9a06">%r</span><span style="color:#4e9a06">&#39;</span> <span style="color:#ce5c00;font-weight:bold">%</span> <span style="color:#000">entry</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">entry</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#204a87">zip</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">argnames</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">args</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">kwargs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">items</span><span style="color:#000;font-weight:bold">())</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">func</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">args</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">**</span><span style="color:#000">kwargs</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">echo_func</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@dump_args</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">f1</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">a</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">b</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">c</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87">print</span> <span style="color:#000">a</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">b</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">c</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">f1</span><span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">precondition</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">precondition</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">use_conditions</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">DEFAULT_ON</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">conditions</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">precondition</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">None</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">use_conditions</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">postcondition</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">postcondition</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">use_conditions</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">DEFAULT_ON</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">conditions</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">None</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">postcondition</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">use_conditions</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">conditions</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">object</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">__slots__</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;__precondition&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;__postcondition&#39;</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">__init__</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">pre</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">post</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">use_conditions</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">DEFAULT_ON</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#204a87;font-weight:bold">not</span> <span style="color:#000">use_conditions</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">pre</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">post</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">None</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">__precondition</span>  <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">pre</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">__postcondition</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">post</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Text" data-lang="Text"><span style="display:flex;"><span>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+</span></span></code></pre></div><p>An example of <code>inline code or CLI formatting</code> within a paragraph, requires using the ` character to open and close the block.</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="" aria-label="">
+    <a target="_blank" rel="noopener" href="" aria-label="">
+      <i class=""></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Hewlett Packard Enterprise Development LP</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script type="module" async>
+import mermaid from "https:\/\/cdn.jsdelivr.net\/npm\/mermaid@latest\/dist\/mermaid.esm.min.mjs";
+
+(function($) {
+    if ($('.mermaid').length == 0)  {
+        mermaid.initialize({startOnLoad: false});
+        return;
+    }
+
+    var params = {"theme":"base","themevariables":{"background":"#fff","darkmode":false,"fontfamily":"Open Source Pro, arial","notebkgcolor":"#f6f6f6","notetextcolor":"#000","primarybordercolor":"#ff8300","primarycolor":"#ff8300","primarytextcolor":"#fff","secondarycolor":"#01A982","tertiarycolor":"#7FF9E2","textcolor":"#000"}};
+
+    
+    
+    var norm = function(defaultConfig, params) {
+        var result = {};
+        for (const key in defaultConfig) {
+            const keyLower = key.toLowerCase();
+            if (defaultConfig.hasOwnProperty(key) && params.hasOwnProperty(keyLower)) {
+                if (typeof defaultConfig[key] === "object") {
+                    result[key] = norm(defaultConfig[key], params[keyLower]);
+                } else {
+                    result[key] = params[keyLower];
+                }
+            }
+        }
+        return result;
+    };
+
+    var settings = norm(mermaid.mermaidAPI.defaultConfig, params);
+    settings.startOnLoad = true;
+    mermaid.initialize(settings);
+})(jQuery);
+</script>
+<script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+
+<script src="/js/tocbot.min.js"></script>
+<script type="text/javascript">
+    tocbot.init({
+        
+        tocSelector: '.td-toc',
+        
+        contentSelector: '.td-content',
+        
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        
+        ignoreHiddenElements: true,
+        
+        
+        
+        
+        
+        collapseDepth: '3 ',
+        
+        scrollSmooth: false,
+        
+        ignoreSelector: 'default-ignore',
+        
+        scrollContainer: 'td-content',
+    });
+</script>
+
+  </body>
+</html>

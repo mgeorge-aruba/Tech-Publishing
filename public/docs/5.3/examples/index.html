@@ -1,0 +1,734 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="alternate" type="text/html" href="http://localhost:1313/docs/5.3/examples/_print/">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Examples | TechDocs - WLAN, SD-Branch, &amp; Location Services</title>
+<meta name="description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.">
+<meta property="og:title" content="Examples" />
+<meta property="og:description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/docs/5.3/examples/" />
+
+<meta itemprop="name" content="Examples">
+<meta itemprop="description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts."><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Examples"/>
+<meta name="twitter:description" content="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts."/>
+
+
+
+
+
+<link href="/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <div class="top-band"></div>
+<nav class="td-navbar js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 942.71 313.37" style="enable-background:new 0 0 942.71 313.37"><style>.st0{fill:#ff8300}</style><g><path class="st0" d="M744.81 79.56c-7.86.0-15.15 2.33-21.29 6.27v-5.94C722.78 64.11 709.88 59 706.5 57.38h-.38v98.28s11.58-1.25 15.92-7.6c6.38 4.61 14.24 7.35 22.77 7.35 21.38.0 38.69-16.99 38.69-37.92S766.14 79.56 744.81 79.56zm0 58.9c-11.87.0-21.45-9.43-21.45-21.02.0-11.59 9.59-21.02 21.45-21.02 11.87.0 21.43 9.43 21.43 21.02C766.24 129.03 756.63 138.46 744.81 138.46zM826.62 79.56c-21.38.0-38.71 16.99-38.71 37.92s17.31 37.92 38.71 37.92c8.82.0 16.95-2.91 23.49-7.81 4 6.56 15.2 7.81 15.2 7.81v-37.92C865.31 96.55 847.95 79.56 826.62 79.56zm0 58.9c-11.87.0-21.45-9.43-21.45-21.02.0-11.59 9.59-21.02 21.45-21.02 11.87.0 21.43 9.43 21.43 21.02S838.44 138.46 826.62 138.46zM518.07 79.56c-21.34.0-38.68 16.99-38.68 37.92s17.34 37.92 38.68 37.92c8.86.0 16.97-2.91 23.48-7.81 4 6.56 15.2 7.81 15.2 7.81v-37.92C556.75 96.55 539.45 79.56 518.07 79.56zm0 58.9c-11.82.0-21.42-9.43-21.42-21.02.0-11.59 9.6-21.02 21.42-21.02s21.46 9.43 21.46 21.02C539.53 129.03 529.93 138.46 518.07 138.46zM603.05 79.56c4.91.0 9.56.91 13.88 2.53v20.02c-3.69-3.16-8.56-5.11-13.88-5.11-11.7.0-21.13 9.3-21.13 20.73v37.67h-17.8V86.62s7.29.33 12.03 3.57c7-6.56 16.47-10.68 26.94-10.68M698.43 117.36c-.1 20.98-16.68 38.01-37.03 38.01s-36.96-17.03-37.08-38.01v-32.4s17.64 4.4 17.81 23.39v8.81c0 11.46 8.63 20.77 19.22 20.77s19.25-9.31 19.25-20.77v-18.4c.74-15.83 14-20.89 17.43-22.52h.36v41.16L698.43 117.36z"/><path d="M207.37 77.4v142.78h-37.43v-56.5h-55.09v56.5H77.4V77.4h37.43v54.16h55.09V77.4h37.45zm94.71 50.21c0 10.71-6.02 17.9-19.54 17.9H260.9v-35.79h21.65C296.06 109.71 302.08 116.9 302.08 127.61zm-15.63 49.08c30.95.0 51.89-17.19 51.89-49.08S317.4 78.3 286.45 78.3h-62.52v142.78h36.96v-44.39h25.56zm62.6-98.39v142.78h102.06V188.8h-65.33v-24.7h59.78v-31.42h-59.78v-22.27h65.33V78.3H349.05z"/><path d="M489.95 183.01v3.49c2.04-2.38 5.79-4.34 10.22-4.34 8.6.0 13.46 5.62 13.46 14.05v24.87h-10.56v-22.65c0-4-2.04-6.73-6.22-6.73-3.24.0-6.05 1.96-6.9 5.28v24.1h-10.56v-38.06h10.56zm41.04 21.46c.85 6.22 5.36 8.77 10.99 8.77 4.17.0 7.15-.94 10.9-3.32v8.69c-3.15 2.3-7.41 3.32-12.52 3.32-11.58.0-19.5-7.49-19.5-19.59.0-11.92 7.49-20.18 17.88-20.18 11.07.0 16.78 7.66 16.78 18.9v3.41H530.99zM531.33 197.57h14.39c-.25-4.09-2.55-6.98-6.73-6.98C535.5 190.59 532.52 192.8 531.33 197.57zm36.02 23.5v-29.55h-7.24V183h7.24v-10.3h10.56V183H586v8.52h-8.09v29.55H567.35zM634.54 183.01h10.22l-11.58 38.06h-9.71l-6.22-23.33-6.22 23.33h-9.71l-11.58-38.06h10.56l6.81 24.27 6.22-24.27h8.09l6.3 24.27L634.54 183.01zm32.61 38.92c-11.07.0-18.65-8.17-18.65-19.84.0-11.75 7.58-19.93 18.65-19.93 11.07.0 18.65 8.17 18.65 19.93C685.8 213.75 678.22 221.93 667.15 221.93zm0-30.83c-5.28.0-8.17 4.6-8.17 10.99.0 6.3 2.9 10.9 8.17 10.9 5.28.0 8.17-4.6 8.17-10.9C675.33 195.7 672.43 191.1 667.15 191.1zM716.46 193.4c-1.45-.85-3.32-1.28-5.28-1.28-3.58.0-6.47 1.87-7.24 5.36v23.59h-10.56v-38.06h10.56v3.75c1.62-2.72 4.77-4.6 8.52-4.6 1.79.0 3.41.34 4 .68V193.4zm31.93 27.67-13.71-17.54v17.54h-10.56v-55.35h10.56v32.36l13.03-15.07h12.69l-15.84 17.46 16.18 20.61H748.39zm23.08-43c-3.41.0-6.3-2.47-6.3-6.05.0-3.49 2.9-6.05 6.3-6.05 3.32.0 6.22 2.55 6.22 6.05C777.68 175.6 774.79 178.07 771.47 178.07zM766.19 221.07v-38.06h10.56v38.06H766.19zm31.16-38.06v3.49c2.04-2.38 5.79-4.34 10.22-4.34 8.6.0 13.46 5.62 13.46 14.05v24.87h-10.56v-22.65c0-4-2.04-6.73-6.22-6.73-3.24.0-6.05 1.96-6.9 5.28v24.1h-10.56v-38.06H797.35zm57.4 33.72c-1.7 1.96-5.02 3.83-9.28 3.83-10.99.0-17.2-8.86-17.2-19.16.0-10.39 6.22-19.25 17.2-19.25 4.26.0 7.58 1.87 9.28 3.83V183h10.56v33.89c0 13.96-10.3 19.07-20.69 19.07-5.19.0-10.05-1.28-13.11-3.24v-10.39c3.92 3.41 8 4.68 12.94 4.68 5.7.0 10.3-2.89 10.3-9.11V216.73zm0-21.8c-1.19-2.13-3.92-3.92-7.07-3.92-5.62.0-8.86 4.34-8.86 10.39.0 5.96 3.24 10.3 8.86 10.3 3.15.0 5.88-1.7 7.07-3.92V194.93z"/></g></svg></span><span class="navbar-brand__name">TechDocs - WLAN, SD-Branch, &amp; Location Services</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://networkingsupport.hpe.com/" target="_blank" rel="noopener"><span>HPE Networking Support Portal</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.arubanetworks.com/techdocs/ArubaDocPortal/content/docportal.htm" target="_blank" rel="noopener"><span>Documentation Portal</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+  </div>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
+  <a href="/" title="HPE Aruba Networking" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Home</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-markdown-li">
+  <input type="checkbox" id="m-markdown-check"/>
+  <label for="m-markdown-check"><a href="/markdown/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-markdown"><span class="">Markdown Examples</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-posts-li">
+  <input type="checkbox" id="m-posts-check"/>
+  <label for="m-posts-check"><a href="/posts/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-posts"><span class="">Posts</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-postsintune-extensionmy-first-post-li">
+  <input type="checkbox" id="m-postsintune-extensionmy-first-post-check"/>
+  <label for="m-postsintune-extensionmy-first-post-check"><a href="/posts/intune-extension/my-first-post/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-postsintune-extensionmy-first-post"><span class="">My First Post - Test</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-postsclearpass-extension-000-li">
+  <input type="checkbox" id="m-postsclearpass-extension-000-check"/>
+  <label for="m-postsclearpass-extension-000-check"><a href="/posts/clearpass-extension-000/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-postsclearpass-extension-000"><span class="">ClearPass Extensions</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-postsintune-extension-000-li">
+  <input type="checkbox" id="m-postsintune-extension-000-check"/>
+  <label for="m-postsintune-extension-000-check"><a href="/posts/intune-extension-000/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-postsintune-extension-000"><span class="">Intune Extension</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <input type="checkbox" id="m-docs-check" checked/>
+  <label for="m-docs-check"><a href="/docs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docs"><span class=""></span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs53-li">
+  <input type="checkbox" id="m-docs53-check" checked/>
+  <label for="m-docs53-check"><a href="/docs/5.3/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docs53"><span class=""></span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53aboutoverview-li">
+  <input type="checkbox" id="m-docs53aboutoverview-check"/>
+  <label for="m-docs53aboutoverview-check"><a href="/docs/5.3/about/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53aboutoverview"><span class="">About</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedaccessibility-li">
+  <input type="checkbox" id="m-docs53getting-startedaccessibility-check"/>
+  <label for="m-docs53getting-startedaccessibility-check"><a href="/docs/5.3/getting-started/accessibility/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedaccessibility"><span class="">Accessibility</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsaccordion-li">
+  <input type="checkbox" id="m-docs53componentsaccordion-check"/>
+  <label for="m-docs53componentsaccordion-check"><a href="/docs/5.3/components/accordion/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsaccordion"><span class="">Accordion</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsalerts-li">
+  <input type="checkbox" id="m-docs53componentsalerts-check"/>
+  <label for="m-docs53componentsalerts-check"><a href="/docs/5.3/components/alerts/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsalerts"><span class="">Alerts</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53extendapproach-li">
+  <input type="checkbox" id="m-docs53extendapproach-check"/>
+  <label for="m-docs53extendapproach-check"><a href="/docs/5.3/extend/approach/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53extendapproach"><span class="">Approach</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesbackground-li">
+  <input type="checkbox" id="m-docs53utilitiesbackground-check"/>
+  <label for="m-docs53utilitiesbackground-check"><a href="/docs/5.3/utilities/background/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesbackground"><span class="">Background</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsbadge-li">
+  <input type="checkbox" id="m-docs53componentsbadge-check"/>
+  <label for="m-docs53componentsbadge-check"><a href="/docs/5.3/components/badge/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsbadge"><span class="">Badges</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedbest-practices-li">
+  <input type="checkbox" id="m-docs53getting-startedbest-practices-check"/>
+  <label for="m-docs53getting-startedbest-practices-check"><a href="/docs/5.3/getting-started/best-practices/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedbest-practices"><span class="">Best practices</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedparcel-li">
+  <input type="checkbox" id="m-docs53getting-startedparcel-check"/>
+  <label for="m-docs53getting-startedparcel-check"><a href="/docs/5.3/getting-started/parcel/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedparcel"><span class="">Bootstrap and Parcel</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedvite-li">
+  <input type="checkbox" id="m-docs53getting-startedvite-check"/>
+  <label for="m-docs53getting-startedvite-check"><a href="/docs/5.3/getting-started/vite/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedvite"><span class="">Bootstrap and Vite</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedwebpack-li">
+  <input type="checkbox" id="m-docs53getting-startedwebpack-check"/>
+  <label for="m-docs53getting-startedwebpack-check"><a href="/docs/5.3/getting-started/webpack/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedwebpack"><span class="">Bootstrap and Webpack</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesborders-li">
+  <input type="checkbox" id="m-docs53utilitiesborders-check"/>
+  <label for="m-docs53utilitiesborders-check"><a href="/docs/5.3/utilities/borders/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesborders"><span class="">Borders</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53aboutbrand-li">
+  <input type="checkbox" id="m-docs53aboutbrand-check"/>
+  <label for="m-docs53aboutbrand-check"><a href="/docs/5.3/about/brand/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53aboutbrand"><span class="">Brand guidelines</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsbreadcrumb-li">
+  <input type="checkbox" id="m-docs53componentsbreadcrumb-check"/>
+  <label for="m-docs53componentsbreadcrumb-check"><a href="/docs/5.3/components/breadcrumb/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsbreadcrumb"><span class="">Breadcrumb</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53layoutbreakpoints-li">
+  <input type="checkbox" id="m-docs53layoutbreakpoints-check"/>
+  <label for="m-docs53layoutbreakpoints-check"><a href="/docs/5.3/layout/breakpoints/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53layoutbreakpoints"><span class="">Breakpoints</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedbrowsers-devices-li">
+  <input type="checkbox" id="m-docs53getting-startedbrowsers-devices-check"/>
+  <label for="m-docs53getting-startedbrowsers-devices-check"><a href="/docs/5.3/getting-started/browsers-devices/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedbrowsers-devices"><span class="">Browsers and devices</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsbutton-group-li">
+  <input type="checkbox" id="m-docs53componentsbutton-group-check"/>
+  <label for="m-docs53componentsbutton-group-check"><a href="/docs/5.3/components/button-group/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsbutton-group"><span class="">Button group</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsbuttons-li">
+  <input type="checkbox" id="m-docs53componentsbuttons-check"/>
+  <label for="m-docs53componentsbuttons-check"><a href="/docs/5.3/components/buttons/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsbuttons"><span class="">Buttons</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentscard-li">
+  <input type="checkbox" id="m-docs53componentscard-check"/>
+  <label for="m-docs53componentscard-check"><a href="/docs/5.3/components/card/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentscard"><span class="">Cards</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentscarousel-li">
+  <input type="checkbox" id="m-docs53componentscarousel-check"/>
+  <label for="m-docs53componentscarousel-check"><a href="/docs/5.3/components/carousel/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentscarousel"><span class="">Carousel</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53formschecks-radios-li">
+  <input type="checkbox" id="m-docs53formschecks-radios-check"/>
+  <label for="m-docs53formschecks-radios-check"><a href="/docs/5.3/forms/checks-radios/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53formschecks-radios"><span class="">Checks and radios</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53helpersclearfix-li">
+  <input type="checkbox" id="m-docs53helpersclearfix-check"/>
+  <label for="m-docs53helpersclearfix-check"><a href="/docs/5.3/helpers/clearfix/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53helpersclearfix"><span class="">Clearfix</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsclose-button-li">
+  <input type="checkbox" id="m-docs53componentsclose-button-check"/>
+  <label for="m-docs53componentsclose-button-check"><a href="/docs/5.3/components/close-button/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsclose-button"><span class="">Close button</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentscollapse-li">
+  <input type="checkbox" id="m-docs53componentscollapse-check"/>
+  <label for="m-docs53componentscollapse-check"><a href="/docs/5.3/components/collapse/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentscollapse"><span class="">Collapse</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53customizecolor-li">
+  <input type="checkbox" id="m-docs53customizecolor-check"/>
+  <label for="m-docs53customizecolor-check"><a href="/docs/5.3/customize/color/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53customizecolor"><span class="">Color</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53helperscolor-background-li">
+  <input type="checkbox" id="m-docs53helperscolor-background-check"/>
+  <label for="m-docs53helperscolor-background-check"><a href="/docs/5.3/helpers/color-background/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53helperscolor-background"><span class="">Color and background</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53customizecolor-modes-li">
+  <input type="checkbox" id="m-docs53customizecolor-modes-check"/>
+  <label for="m-docs53customizecolor-modes-check"><a href="/docs/5.3/customize/color-modes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53customizecolor-modes"><span class="">Color modes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53helperscolored-links-li">
+  <input type="checkbox" id="m-docs53helperscolored-links-check"/>
+  <label for="m-docs53helperscolored-links-check"><a href="/docs/5.3/helpers/colored-links/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53helperscolored-links"><span class="">Colored links</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiescolors-li">
+  <input type="checkbox" id="m-docs53utilitiescolors-check"/>
+  <label for="m-docs53utilitiescolors-check"><a href="/docs/5.3/utilities/colors/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiescolors"><span class="">Colors</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53layoutcolumns-li">
+  <input type="checkbox" id="m-docs53layoutcolumns-check"/>
+  <label for="m-docs53layoutcolumns-check"><a href="/docs/5.3/layout/columns/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53layoutcolumns"><span class="">Columns</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53customizecomponents-li">
+  <input type="checkbox" id="m-docs53customizecomponents-check"/>
+  <label for="m-docs53customizecomponents-check"><a href="/docs/5.3/customize/components/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53customizecomponents"><span class="">Components</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53layoutcontainers-li">
+  <input type="checkbox" id="m-docs53layoutcontainers-check"/>
+  <label for="m-docs53layoutcontainers-check"><a href="/docs/5.3/layout/containers/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53layoutcontainers"><span class="">Containers</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedcontents-li">
+  <input type="checkbox" id="m-docs53getting-startedcontents-check"/>
+  <label for="m-docs53getting-startedcontents-check"><a href="/docs/5.3/getting-started/contents/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedcontents"><span class="">Contents</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedcontribute-li">
+  <input type="checkbox" id="m-docs53getting-startedcontribute-check"/>
+  <label for="m-docs53getting-startedcontribute-check"><a href="/docs/5.3/getting-started/contribute/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedcontribute"><span class="">Contribute</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53layoutcss-grid-li">
+  <input type="checkbox" id="m-docs53layoutcss-grid-check"/>
+  <label for="m-docs53layoutcss-grid-check"><a href="/docs/5.3/layout/css-grid/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53layoutcss-grid"><span class="">CSS Grid</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53customizecss-variables-li">
+  <input type="checkbox" id="m-docs53customizecss-variables-check"/>
+  <label for="m-docs53customizecss-variables-check"><a href="/docs/5.3/customize/css-variables/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53customizecss-variables"><span class="">CSS variables</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53customizeoverview-li">
+  <input type="checkbox" id="m-docs53customizeoverview-check"/>
+  <label for="m-docs53customizeoverview-check"><a href="/docs/5.3/customize/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53customizeoverview"><span class="">Customize</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesdisplay-li">
+  <input type="checkbox" id="m-docs53utilitiesdisplay-check"/>
+  <label for="m-docs53utilitiesdisplay-check"><a href="/docs/5.3/utilities/display/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesdisplay"><span class="">Display property</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53docsref-li">
+  <input type="checkbox" id="m-docs53docsref-check"/>
+  <label for="m-docs53docsref-check"><a href="/docs/5.3/docsref/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53docsref"><span class="">Docs reference</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-starteddownload-li">
+  <input type="checkbox" id="m-docs53getting-starteddownload-check"/>
+  <label for="m-docs53getting-starteddownload-check"><a href="/docs/5.3/getting-started/download/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-starteddownload"><span class="">Download</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53componentsdropdowns-li">
+  <input type="checkbox" id="m-docs53componentsdropdowns-check"/>
+  <label for="m-docs53componentsdropdowns-check"><a href="/docs/5.3/components/dropdowns/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53componentsdropdowns"><span class="">Dropdowns</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs53examples-li">
+  <input type="checkbox" id="m-docs53examples-check" checked/>
+  <label for="m-docs53examples-check"><a href="/docs/5.3/examples/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-docs53examples"><span class="td-sidebar-nav-active-item">Examples</span></a></label>
+  
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesalbum-li">
+  <input type="checkbox" id="m-docs53examplesalbum-check"/>
+  <label for="m-docs53examplesalbum-check"><a href="/docs/5.3/examples/album/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesalbum"><span class="">Album example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesbadges-li">
+  <input type="checkbox" id="m-docs53examplesbadges-check"/>
+  <label for="m-docs53examplesbadges-check"><a href="/docs/5.3/examples/badges/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesbadges"><span class="">Badges</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesblog-li">
+  <input type="checkbox" id="m-docs53examplesblog-check"/>
+  <label for="m-docs53examplesblog-check"><a href="/docs/5.3/examples/blog/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesblog"><span class="">Blog Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbar-bottom-li">
+  <input type="checkbox" id="m-docs53examplesnavbar-bottom-check"/>
+  <label for="m-docs53examplesnavbar-bottom-check"><a href="/docs/5.3/examples/navbar-bottom/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbar-bottom"><span class="">Bottom navbar example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesbreadcrumbs-li">
+  <input type="checkbox" id="m-docs53examplesbreadcrumbs-check"/>
+  <label for="m-docs53examplesbreadcrumbs-check"><a href="/docs/5.3/examples/breadcrumbs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesbreadcrumbs"><span class="">Breadcrumbs</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesbuttons-li">
+  <input type="checkbox" id="m-docs53examplesbuttons-check"/>
+  <label for="m-docs53examplesbuttons-check"><a href="/docs/5.3/examples/buttons/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesbuttons"><span class="">Buttons</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescarousel-li">
+  <input type="checkbox" id="m-docs53examplescarousel-check"/>
+  <label for="m-docs53examplescarousel-check"><a href="/docs/5.3/examples/carousel/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescarousel"><span class="">Carousel Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescheatsheet-li">
+  <input type="checkbox" id="m-docs53examplescheatsheet-check"/>
+  <label for="m-docs53examplescheatsheet-check"><a href="/docs/5.3/examples/cheatsheet/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescheatsheet"><span class="">Cheatsheet</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescheckout-li">
+  <input type="checkbox" id="m-docs53examplescheckout-check"/>
+  <label for="m-docs53examplescheckout-check"><a href="/docs/5.3/examples/checkout/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescheckout"><span class="">Checkout example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescover-li">
+  <input type="checkbox" id="m-docs53examplescover-check"/>
+  <label for="m-docs53examplescover-check"><a href="/docs/5.3/examples/cover/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescover"><span class="">Cover Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesdashboard-li">
+  <input type="checkbox" id="m-docs53examplesdashboard-check"/>
+  <label for="m-docs53examplesdashboard-check"><a href="/docs/5.3/examples/dashboard/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesdashboard"><span class="">Dashboard Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesdropdowns-li">
+  <input type="checkbox" id="m-docs53examplesdropdowns-check"/>
+  <label for="m-docs53examplesdropdowns-check"><a href="/docs/5.3/examples/dropdowns/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesdropdowns"><span class="">Dropdowns</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesfeatures-li">
+  <input type="checkbox" id="m-docs53examplesfeatures-check"/>
+  <label for="m-docs53examplesfeatures-check"><a href="/docs/5.3/examples/features/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesfeatures"><span class="">Features</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbar-fixed-li">
+  <input type="checkbox" id="m-docs53examplesnavbar-fixed-check"/>
+  <label for="m-docs53examplesnavbar-fixed-check"><a href="/docs/5.3/examples/navbar-fixed/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbar-fixed"><span class="">Fixed top navbar example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesfooters-li">
+  <input type="checkbox" id="m-docs53examplesfooters-check"/>
+  <label for="m-docs53examplesfooters-check"><a href="/docs/5.3/examples/footers/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesfooters"><span class="">Footers</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesgrid-li">
+  <input type="checkbox" id="m-docs53examplesgrid-check"/>
+  <label for="m-docs53examplesgrid-check"><a href="/docs/5.3/examples/grid/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesgrid"><span class="">Grid Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesheaders-li">
+  <input type="checkbox" id="m-docs53examplesheaders-check"/>
+  <label for="m-docs53examplesheaders-check"><a href="/docs/5.3/examples/headers/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesheaders"><span class="">Headers</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesheroes-li">
+  <input type="checkbox" id="m-docs53examplesheroes-check"/>
+  <label for="m-docs53examplesheroes-check"><a href="/docs/5.3/examples/heroes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesheroes"><span class="">Heroes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesjumbotron-li">
+  <input type="checkbox" id="m-docs53examplesjumbotron-check"/>
+  <label for="m-docs53examplesjumbotron-check"><a href="/docs/5.3/examples/jumbotron/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesjumbotron"><span class="">Jumbotron example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesjumbotrons-li">
+  <input type="checkbox" id="m-docs53examplesjumbotrons-check"/>
+  <label for="m-docs53examplesjumbotrons-check"><a href="/docs/5.3/examples/jumbotrons/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesjumbotrons"><span class="">Jumbotrons</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53exampleslist-groups-li">
+  <input type="checkbox" id="m-docs53exampleslist-groups-check"/>
+  <label for="m-docs53exampleslist-groups-check"><a href="/docs/5.3/examples/list-groups/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53exampleslist-groups"><span class="">List groups</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesmasonry-li">
+  <input type="checkbox" id="m-docs53examplesmasonry-check"/>
+  <label for="m-docs53examplesmasonry-check"><a href="/docs/5.3/examples/masonry/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesmasonry"><span class="">Masonry example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesmodals-li">
+  <input type="checkbox" id="m-docs53examplesmodals-check"/>
+  <label for="m-docs53examplesmodals-check"><a href="/docs/5.3/examples/modals/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesmodals"><span class="">Modals</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbars-offcanvas-li">
+  <input type="checkbox" id="m-docs53examplesnavbars-offcanvas-check"/>
+  <label for="m-docs53examplesnavbars-offcanvas-check"><a href="/docs/5.3/examples/navbars-offcanvas/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbars-offcanvas"><span class="">Navbar Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbars-li">
+  <input type="checkbox" id="m-docs53examplesnavbars-check"/>
+  <label for="m-docs53examplesnavbars-check"><a href="/docs/5.3/examples/navbars/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbars"><span class="">Navbar Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesoffcanvas-navbar-li">
+  <input type="checkbox" id="m-docs53examplesoffcanvas-navbar-check"/>
+  <label for="m-docs53examplesoffcanvas-navbar-check"><a href="/docs/5.3/examples/offcanvas-navbar/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesoffcanvas-navbar"><span class="">Offcanvas navbar template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplespricing-li">
+  <input type="checkbox" id="m-docs53examplespricing-check"/>
+  <label for="m-docs53examplespricing-check"><a href="/docs/5.3/examples/pricing/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplespricing"><span class="">Pricing example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesproduct-li">
+  <input type="checkbox" id="m-docs53examplesproduct-check"/>
+  <label for="m-docs53examplesproduct-check"><a href="/docs/5.3/examples/product/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesproduct"><span class="">Product example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplessidebars-li">
+  <input type="checkbox" id="m-docs53examplessidebars-check"/>
+  <label for="m-docs53examplessidebars-check"><a href="/docs/5.3/examples/sidebars/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplessidebars"><span class="">Sidebars</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplessign-in-li">
+  <input type="checkbox" id="m-docs53examplessign-in-check"/>
+  <label for="m-docs53examplessign-in-check"><a href="/docs/5.3/examples/sign-in/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplessign-in"><span class="">Signin Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesstarter-template-li">
+  <input type="checkbox" id="m-docs53examplesstarter-template-check"/>
+  <label for="m-docs53examplesstarter-template-check"><a href="/docs/5.3/examples/starter-template/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesstarter-template"><span class="">Starter Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplessticky-footer-navbar-li">
+  <input type="checkbox" id="m-docs53examplessticky-footer-navbar-check"/>
+  <label for="m-docs53examplessticky-footer-navbar-check"><a href="/docs/5.3/examples/sticky-footer-navbar/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplessticky-footer-navbar"><span class="">Sticky Footer Navbar Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplessticky-footer-li">
+  <input type="checkbox" id="m-docs53examplessticky-footer-check"/>
+  <label for="m-docs53examplessticky-footer-check"><a href="/docs/5.3/examples/sticky-footer/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplessticky-footer"><span class="">Sticky Footer Template</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesnavbar-static-li">
+  <input type="checkbox" id="m-docs53examplesnavbar-static-check"/>
+  <label for="m-docs53examplesnavbar-static-check"><a href="/docs/5.3/examples/navbar-static/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesnavbar-static"><span class="">Top navbar example</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescarousel-rtl-li">
+  <input type="checkbox" id="m-docs53examplescarousel-rtl-check"/>
+  <label for="m-docs53examplescarousel-rtl-check"><a href="/docs/5.3/examples/carousel-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescarousel-rtl"><span class="">قالب  شرائح العرض</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesblog-rtl-li">
+  <input type="checkbox" id="m-docs53examplesblog-rtl-check"/>
+  <label for="m-docs53examplesblog-rtl-check"><a href="/docs/5.3/examples/blog-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesblog-rtl"><span class="">قالب المدونة</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesdashboard-rtl-li">
+  <input type="checkbox" id="m-docs53examplesdashboard-rtl-check"/>
+  <label for="m-docs53examplesdashboard-rtl-check"><a href="/docs/5.3/examples/dashboard-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesdashboard-rtl"><span class="">قالب لوحة القيادة</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescheckout-rtl-li">
+  <input type="checkbox" id="m-docs53examplescheckout-rtl-check"/>
+  <label for="m-docs53examplescheckout-rtl-check"><a href="/docs/5.3/examples/checkout-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescheckout-rtl"><span class="">مثال إتمام الشراء</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplesalbum-rtl-li">
+  <input type="checkbox" id="m-docs53examplesalbum-rtl-check"/>
+  <label for="m-docs53examplesalbum-rtl-check"><a href="/docs/5.3/examples/album-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplesalbum-rtl"><span class="">مثال الألبوم</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53examplescheatsheet-rtl-li">
+  <input type="checkbox" id="m-docs53examplescheatsheet-rtl-check"/>
+  <label for="m-docs53examplescheatsheet-rtl-check"><a href="/docs/5.3/examples/cheatsheet-rtl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53examplescheatsheet-rtl"><span class="">ورقة الغش</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53contentfigures-li">
+  <input type="checkbox" id="m-docs53contentfigures-check"/>
+  <label for="m-docs53contentfigures-check"><a href="/docs/5.3/content/figures/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53contentfigures"><span class="">Figures</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesflex-li">
+  <input type="checkbox" id="m-docs53utilitiesflex-check"/>
+  <label for="m-docs53utilitiesflex-check"><a href="/docs/5.3/utilities/flex/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesflex"><span class="">Flex</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53utilitiesfloat-li">
+  <input type="checkbox" id="m-docs53utilitiesfloat-check"/>
+  <label for="m-docs53utilitiesfloat-check"><a href="/docs/5.3/utilities/float/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53utilitiesfloat"><span class="">Float</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53formsfloating-labels-li">
+  <input type="checkbox" id="m-docs53formsfloating-labels-check"/>
+  <label for="m-docs53formsfloating-labels-check"><a href="/docs/5.3/forms/floating-labels/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53formsfloating-labels"><span class="">Floating labels</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53helpersfocus-ring-li">
+  <input type="checkbox" id="m-docs53helpersfocus-ring-check"/>
+  <label for="m-docs53helpersfocus-ring-check"><a href="/docs/5.3/helpers/focus-ring/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53helpersfocus-ring"><span class="">Focus ring</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53formsform-control-li">
+  <input type="checkbox" id="m-docs53formsform-control-check"/>
+  <label for="m-docs53formsform-control-check"><a href="/docs/5.3/forms/form-control/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53formsform-control"><span class="">Form controls</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53formsoverview-li">
+  <input type="checkbox" id="m-docs53formsoverview-check"/>
+  <label for="m-docs53formsoverview-check"><a href="/docs/5.3/forms/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53formsoverview"><span class="">Forms</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docs53getting-startedintroduction-li">
+  <input type="checkbox" id="m-docs53getting-startedintroduction-check"/>
+  <label for="m-docs53getting-startedintroduction-check"><a href="/docs/5.3/getting-started/introduction/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docs53getting-startedintroduction"><span class="">Get started with Bootstrap</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsversions-li">
+  <input type="checkbox" id="m-docsversions-check"/>
+  <label for="m-docsversions-check"><a href="/docs/versions/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsversions"><span class="">Versions</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-404html-li">
+  <input type="checkbox" id="m-404html-check"/>
+  <label for="m-404html-check"><a href="/404.html" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-404html"><span class="">404 - File not found</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/docs/5.3/examples/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+
+</div>
+
+            
+            <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      <h5 class="taxonomy-title">Categories</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/class-1/" data-taxonomy-term="class-1"><span class="taxonomy-label">Class-1</span><span class="taxonomy-count">2</span></a></li>
+        </ul>
+    </div>
+  
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/"></a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/5.3/"></a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Examples</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Examples</h1>
+	<div class="lead">Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.</div>
+	<header class="article-meta">
+		
+<p class="reading-time"><i class="fa-solid fa-clock" aria-hidden="true"></i>&nbsp; less than a minute &nbsp;</p>
+</header>
+	
+
+	
+
+<style>
+  .feedback--title {
+    font-size: x-large;
+    font-weight: bold;
+    display: block;
+  }
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<p class="feedback--title">Feedback</p>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! 
+
+<style>
+  #span-769b6051.email-feedback:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="email-feedback" data-user="kcabdeef-emt-abura" data-domain="moc.eph" id="span-769b6051"></span>&#32;
+
+<script id="script-769b6051">
+  var scriptTag = document.getElementById("script-769b6051");
+  var link = document.createElement("a");
+  var address = "kcabdeef-emt-abura".split('').reverse().join('') + "@" + "moc.eph".split('').reverse().join('') + "?" + "A0%A0%:stnemmoCA0%A0%\/selpmaxe\/3.5\/scod\/3131:tsohlacol\/\/:ptth02%:LRUA0%A0%selpmaxE02%:eltit02%egaP=ydob\u0026selpmaxE02%-02%KCABDEEF=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "Please let us know how we can improve.";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+ </p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. 
+
+<style>
+  #span-d2bebff1.email-feedback:before {
+    content:attr(data-domain) "\0040" attr(data-user);
+    unicode-bidi:bidi-override;
+    direction:rtl;
+  }
+</style>
+&#32;<span class="email-feedback" data-user="kcabdeef-emt-abura" data-domain="moc.eph" id="span-d2bebff1"></span>&#32;
+
+<script id="script-d2bebff1">
+  var scriptTag = document.getElementById("script-d2bebff1");
+  var link = document.createElement("a");
+  var address = "kcabdeef-emt-abura".split('').reverse().join('') + "@" + "moc.eph".split('').reverse().join('') + "?" + "A0%A0%:stnemmoCA0%A0%\/selpmaxe\/3.5\/scod\/3131:tsohlacol\/\/:ptth02%:LRUA0%A0%selpmaxE02%:eltit02%egaP=ydob\u0026selpmaxE02%-02%KCABDEEF=tcejbus".split('').reverse().join('');
+  link.href = "mailto" + ":" + address;
+  link.innerText = "Please let us know how we can improve.";
+  scriptTag.parentElement.insertBefore(link, scriptTag.previousElementSibling);
+  scriptTag.parentElement.removeChild(scriptTag.previousElementSibling)
+</script>
+ </p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="" aria-label="">
+    <a target="_blank" rel="noopener" href="" aria-label="">
+      <i class=""></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Hewlett Packard Enterprise Development LP</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+
+<script src="/js/tocbot.min.js"></script>
+<script type="text/javascript">
+    tocbot.init({
+        
+        tocSelector: '.td-toc',
+        
+        contentSelector: '.td-content',
+        
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        
+        ignoreHiddenElements: true,
+        
+        
+        
+        
+        
+        collapseDepth: '3 ',
+        
+        scrollSmooth: false,
+        
+        ignoreSelector: 'default-ignore',
+        
+        scrollContainer: 'td-content',
+    });
+</script>
+
+  </body>
+</html>

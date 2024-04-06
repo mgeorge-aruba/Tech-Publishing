@@ -1,0 +1,37 @@
+.td-search {
+  
+    // Search icon
+    &__icon {
+
+        // Styling adjustments for the navbar
+      @at-root {
+        .td-navbar & {
+          color: $navbar-light-color;
+        }
+      }
+    }
+  
+    // Search input element
+    &__input {
+  
+      &:not(:focus) {
+        background-color: rgba(255,255,255,0.5);
+      }
+  
+      &.form-control:focus {
+        border-color: tint-color($black, 95%);
+        box-shadow: 0 0 0 2px tint-color($black, 40%);
+      }
+  
+      // Styling adjustments for the navbar
+      @at-root {
+        .td-navbar & {
+          color: $navbar-light-color;
+  
+          @include placeholder {
+            color: $navbar-light-color;
+          }
+        }
+      }
+    }
+  }

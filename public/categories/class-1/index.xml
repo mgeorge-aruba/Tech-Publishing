@@ -1,0 +1,188 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TechDocs - WLAN, SD-Branch, &amp; Location Services – Class-1</title>
+    <link>http://localhost:1313/categories/class-1/</link>
+    <description>Recent content in Class-1 on TechDocs - WLAN, SD-Branch, &amp; Location Services</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="http://localhost:1313/categories/class-1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Posts: ClearPass Extensions</title>
+      <link>http://localhost:1313/posts/clearpass-extension-000/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/clearpass-extension-000/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;clearpass-extensions&#34;&gt;ClearPass Extensions&lt;/h1&gt;
+&lt;p&gt;By itself, ClearPass is already a very powerful tool. ClearPass becomes even more powerful with the use of extensions. An extension is a microservice working on its own in a container independently from the ClearPass operating system, which is used by ClearPass to communicate with external systems. Because they are developed as microservices, they can be integrated into ClearPass without any major changes to the OS. It is very flexible and it&amp;rsquo;s easy to add and remove extensions. You can think of it as applications on a phone. We can install, update, remove applications without having to update the phone OS.&lt;/p&gt;
+&lt;p&gt;Extensions allow ClearPass to interact with external systems. They can be leveraged to perform advanced authentication, two-factor authentication, apply policies or firewall rules, onboard guests onto the Wi-Fi networks or manage BYOD devices. The list of use cases is endless. Extensions are easy to install from the ClearPass Extensions Store. In a cluster, extensions can be installed on a subscriber independently of the publisher.&lt;/p&gt;
+&lt;p&gt;To view and work with the list of extensions and to install and configure new extensions, go to Guest &amp;gt; Administration &amp;gt; Extensions. The &lt;strong&gt;Manage Extensions&lt;/strong&gt; list view opens. All extensions that have been installed are included in the list. Information shown for each extension includes its name, version, state (running or stopped), hostname, and IP address.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Figure 1: The Manage Extensions List View&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5CUsers%5Cguptabi%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220720163122598.png&#34; alt=&#34;image-20220720163122598&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Name&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;The name of the extension.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Version&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The version number of the extension.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;State&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The extension’s current state, either &lt;strong&gt;Running&lt;/strong&gt; or &lt;strong&gt;Not Running&lt;/strong&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Hostname&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The hostname for the extension.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;IP Address&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The IPv4 address used for the extension. This address will be within the network range 172.17.0.1/16.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Filter&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Lets you filter for an extension by name, version, state, hostname, or IP address.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Show Details&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Displays details for the extension such as its state, instance ID, store ID, and any content items.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Reinstall&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Opens the &lt;strong&gt;Extension Reinstall&lt;/strong&gt; form, which lets you delete and then reinstall the extension. You may also modify the IP address. When it is reinstalled, it retains its previous configuration and includes any current Extension Store updates for the extension. After it is reinstalled, the extension’s details show the time it was installed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Delete&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Deletes the extension. You will be asked to confirm the deletion.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Stop&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Stops a running extension.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Restart&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Restarts a stopped extension.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Show Logs&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Displays log messages for extensions actions and various extension-related actions.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Configuration&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The form expands to include the &lt;strong&gt;Extension Configuration&lt;/strong&gt; form with the extension’s current configuration, if any. If you modify the default configuration, you must then select the &lt;strong&gt;Restart extension after updating configuration&lt;/strong&gt; check box in order to have the changes take effect, and then click &lt;strong&gt;Save Changes&lt;/strong&gt;. A progress bar is displayed while the extension is being restarted.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Install extension&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;To install an extension, click this link in the list or in the upper right corner. The initial setup page of the &lt;strong&gt;Install Extension&lt;/strong&gt; form opens. See the next section, &lt;a href=&#34;https://www.arubanetworks.com/techdocs/ClearPass/6.9/Guest/Content/AdministrationTasks1/ExtensionInstall.htm&#34;&gt;Installing Extensions&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Refresh&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Clears any filter selections and refreshes the full list of installed extensions.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Posts: Intune Extension</title>
+      <link>http://localhost:1313/posts/intune-extension-000/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/intune-extension-000/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;intune-extensions&#34;&gt;Intune Extensions&lt;/h1&gt;
+&lt;p&gt;By itself, ClearPass is already a very powerful tool. ClearPass becomes even more powerful with the use of extensions. An extension is a microservice working on its own in a container independently from the ClearPass operating system, which is used by ClearPass to communicate with external systems. Because they are developed as microservices, they can be integrated into ClearPass without any major changes to the OS. It is very flexible and it&amp;rsquo;s easy to add and remove extensions. You can think of it as applications on a phone. We can install, update, remove applications without having to update the phone OS.&lt;/p&gt;
+&lt;p&gt;Extensions allow ClearPass to interact with external systems. They can be leveraged to perform advanced authentication, two-factor authentication, apply policies or firewall rules, onboard guests onto the Wi-Fi networks or manage BYOD devices. The list of use cases is endless. Extensions are easy to install from the ClearPass Extensions Store. In a cluster, extensions can be installed on a subscriber independently of the publisher.&lt;/p&gt;
+&lt;p&gt;To view and work with the list of extensions and to install and configure new extensions, go to Guest &amp;gt; Administration &amp;gt; Extensions. The &lt;strong&gt;Manage Extensions&lt;/strong&gt; list view opens. All extensions that have been installed are included in the list. Information shown for each extension includes its name, version, state (running or stopped), hostname, and IP address.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Figure 1: The Manage Extensions List View&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5CUsers%5Cguptabi%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220720163122598.png&#34; alt=&#34;image-20220720163122598&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Name&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;The name of the extension.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Version&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The version number of the extension.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;State&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The extension’s current state, either &lt;strong&gt;Running&lt;/strong&gt; or &lt;strong&gt;Not Running&lt;/strong&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Hostname&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The hostname for the extension.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;IP Address&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The IPv4 address used for the extension. This address will be within the network range 172.17.0.1/16.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Filter&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Lets you filter for an extension by name, version, state, hostname, or IP address.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Show Details&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Displays details for the extension such as its state, instance ID, store ID, and any content items.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Reinstall&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Opens the &lt;strong&gt;Extension Reinstall&lt;/strong&gt; form, which lets you delete and then reinstall the extension. You may also modify the IP address. When it is reinstalled, it retains its previous configuration and includes any current Extension Store updates for the extension. After it is reinstalled, the extension’s details show the time it was installed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Delete&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Deletes the extension. You will be asked to confirm the deletion.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Stop&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Stops a running extension.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Restart&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Restarts a stopped extension.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Show Logs&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Displays log messages for extensions actions and various extension-related actions.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Configuration&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The form expands to include the &lt;strong&gt;Extension Configuration&lt;/strong&gt; form with the extension’s current configuration, if any. If you modify the default configuration, you must then select the &lt;strong&gt;Restart extension after updating configuration&lt;/strong&gt; check box in order to have the changes take effect, and then click &lt;strong&gt;Save Changes&lt;/strong&gt;. A progress bar is displayed while the extension is being restarted.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Install extension&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;To install an extension, click this link in the list or in the upper right corner. The initial setup page of the &lt;strong&gt;Install Extension&lt;/strong&gt; form opens. See the next section, &lt;a href=&#34;https://www.arubanetworks.com/techdocs/ClearPass/6.9/Guest/Content/AdministrationTasks1/ExtensionInstall.htm&#34;&gt;Installing Extensions&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Refresh&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Clears any filter selections and refreshes the full list of installed extensions.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
